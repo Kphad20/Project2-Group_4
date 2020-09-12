@@ -24,7 +24,5 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 def home():
     return "Hello"
 
-
-
 if __name__=="__main__":
     app.run(debug=True)

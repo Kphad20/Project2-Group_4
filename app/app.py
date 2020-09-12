@@ -22,7 +22,7 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 @app.route("/api")
 @cross_origin()
 def home():
-    energy_info = [doc for doc in db.State_EnergyData2018.find({}, {'_id': False})]
+    energy_info = [doc for doc in db.US_Yearly_Energy_Production_by_Source.find({}, {'_id': False})]
     #cs_info_format = {"data": cs_info[0]}
     # print(cs_info)
     return jsonify(energy_info)

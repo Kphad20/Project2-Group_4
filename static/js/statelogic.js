@@ -21,37 +21,40 @@ function stateSummary(id) {
 
         // console.log(metadata);
         // filter samples by the state 
-        var result1 = productionShare.filter(metadatum => metadatum.id.toString() === id)[0];
+        var result1 = CO2Emissions.filter(metadatum => metadatum.id.toString() === id)[0];
         console.log(result1);
 
-        var result2 = productionRank.filter(metadatum => metadatum.id.toString() === id)[0];
+        var result2 = CO2EmissionsRank.filter(metadatum => metadatum.id.toString() === id)[0];
         console.log(result2);
 
-        var result3 = metadata.filter(metadatum => metadatum.id.toString() === id)[0];
+        var result3 = consumptionPerCapita.filter(metadatum => metadatum.id.toString() === id)[0];
         console.log(result3);
 
-        var result4 = metadata.filter(metadatum => metadatum.id.toString() === id)[0];
-        console.log(result) 4;
+        var result4 = consumptionRank.filter(metadatum => metadatum.id.toString() === id)[0];
+        console.log(resul4t);
 
-        var result5 = metadata.filter(metadatum => metadatum.id.toString() === id)[0];
+        var result5 = expendituresperCapita.filter(metadatum => metadatum.id.toString() === id)[0];
         console.log(result5);
 
-        var result6 = metadata.filter(metadatum => metadatum.id.toString() === id)[0];
+        var result6 = expendituresRank.filter(metadatum => metadatum.id.toString() === id)[0];
         console.log(result6);
 
-        var result7 = metadata.filter(metadatum => metadatum.id.toString() === id)[0];
+        var result7 = productionShare.filter(metadatum => metadatum.id.toString() === id)[0];
         console.log(result7);
 
+        var result8 = productionRank.filter(metadatum => metadatum.id.toString() === id)[0];
+        console.log(result8);
+
         // select the demographic table
-        var getDemographic = d3.select("#sample-metadata");
+        var getSummary = d3.select("#state-summary");
 
         // clear the demographic table
-        getDemographic.html("");
+        getSummary.html("");
 
         // loop through the info in the metadata and append results to table
         Object.entries(result).forEach((key) => {
             console.log(key)
-            getDemographic.append("h6").text(key[0] + ": " + key[1] + "\n");
+            getSummary.append("h6").text(key[0] + ": " + key[1] + "\n");
         });
     });
 }
@@ -157,18 +160,17 @@ function init() {
 
 function StateChange(newState) {
     // Remove previous chart by removing canvas element
-    d3.select("#barChart").remove();
     d3.select("#pieChart").remove();
     // Add canvas elements back
     d3.select("#plot1")
         .append('canvas')
-        .attr('id', 'barChart')
+        .attr('id', 'pieChart')
         .attr('width', '400')
         .attr('height', '400');
 
-    d3.select("#plot2")
+    d3.select("state-table")
         .append('canvas')
-        .attr('id', 'pieChart')
+        .attr('id', 'summary-table')
         .attr('width', '400')
         .attr('height', '400');
 

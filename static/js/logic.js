@@ -66,7 +66,7 @@ d3.json(url, function(err, data) {
     console.log("Inside - On click method")
     var currenturl=window.location.href;
     console.log(currenturl)
-    var newurl=currenturl+"statedata.html"
+    var newurl=currenturl+"statedata.html?name=wy"
     window.location.href = newurl;
   }
 // d3.json("http://localhost:5000/api", function(data) {

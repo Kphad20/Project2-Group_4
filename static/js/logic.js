@@ -54,20 +54,26 @@ lightmap.addTo(myMap);
 // // Add the info legend to the map
 // info.addTo(myMap);
 
-var url = "data/data.geojson";
+var url = "data/states.geojson";
 
 var geojson;
 
 d3.json(url, function(err, data) {
   console.log(data);
   if(err) console.log("error fetching data");
+
+  function statedata(){
+    console.log("Inside - On click method")
+    var currenturl=window.location.href;
+    console.log(currenturl)
+    var newurl=currenturl+"statedata.html"
+    window.location.href = newurl;
+  }
 // d3.json("http://localhost:5000/api", function(data) {
 
   geojson = L.choropleth(data, {
         // Define what property in the features to use
-        valueProperty: function(feature) {
-          return feature.properties.density
-        },
+        valueProperty: "CENSUSAREA",
 
         // Set color scale
         scale: ["#ffffb2", "#b10026"],
@@ -86,7 +92,10 @@ d3.json(url, function(err, data) {
 
         // Binding a pop-up to each layer
         onEachFeature: function(feature, layer) {
-        layer.bindTooltip(feature.properties.name);
+        layer.bindTooltip(feature.properties.NAME)        
         }
   }).addTo(myMap);
+
+  myMap.on('click', statedata);
+
 });

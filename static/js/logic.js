@@ -20,11 +20,11 @@ var layers = {
 // Define a map object
 var myMap = L.map("map", {
   center: [40, -95],
-  zoom: 2,
-  layers: [
-    layers.CONSUMPTION,
-    layers.PRODUCTION,
-    layers.EMISSIONS]
+  zoom: 2
+  // layers: [
+  //   layers.CONSUMPTION,
+  //   layers.PRODUCTION,
+  //   layers.EMISSIONS]
 });
 
 lightmap.addTo(myMap);
@@ -60,8 +60,16 @@ var geojson;
 
 d3.json(path, function(err, data) {
   if(err) console.log("error fetching data");
-  d3.json("http://localhost:5000/api", function(energyData) {
+  d3.json("http://localhost:5000", function(energyData) {
 
+    function statedata(){
+      console.log("Inside - On click method")
+      var currenturl=window.location.href;
+      console.log(currenturl)
+      var newurl=currenturl+"statedata.html?name=wy"
+      window.location.href = newurl;
+    }
+  
       PRODUCTION = [];
       CONSUMPTION = [];
       EMISSIONS = [];
@@ -125,5 +133,7 @@ d3.json(path, function(err, data) {
           layer.bindTooltip(feature.properties.NAME);
           },
       }).addTo(myMap);
+
+    myMap.on('click', statedata);
   });
 });

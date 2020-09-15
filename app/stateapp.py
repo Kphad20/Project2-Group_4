@@ -31,6 +31,7 @@ def home():
 @cross_origin()
 def state():
     state_info = db.State_EnergyData_2018.find({"State Name": "Wyoming"})
+    source_info = db.State_Energy_Production_Source_2018.find({"State Name" : "Wyoming"})
     return jsonify(state_info)
 
 if __name__=="__main__":

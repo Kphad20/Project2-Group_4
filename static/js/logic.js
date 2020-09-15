@@ -61,6 +61,14 @@ var geojson;
 d3.json(url, function(err, data) {
   console.log(data);
   if(err) console.log("error fetching data");
+
+  function statedata(){
+    console.log("Inside - On click method")
+    var currenturl=window.location.href;
+    console.log(currenturl)
+    var newurl=currenturl+"statedata.html"
+    window.location.href = newurl;
+  }
 // d3.json("http://localhost:5000/api", function(data) {
 
   geojson = L.choropleth(data, {
@@ -84,7 +92,10 @@ d3.json(url, function(err, data) {
 
         // Binding a pop-up to each layer
         onEachFeature: function(feature, layer) {
-        layer.bindTooltip(feature.properties.NAME);
+        layer.bindTooltip(feature.properties.NAME)        
         }
   }).addTo(myMap);
+
+  myMap.on('click', statedata);
+
 });

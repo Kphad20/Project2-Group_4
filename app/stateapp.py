@@ -22,11 +22,16 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 @app.route("/api")
 @cross_origin()
 def home():
-    energy_info = [doc for doc in db.State_Energy_Production_Source_2018.find({}, {'_id': False})]
+    energy_info = [doc for doc in db.State_EnergyData_2018.find({}, {'_id': False})]
     #cs_info_format = {"data": cs_info[0]}
     # print(cs_info)
     return jsonify(energy_info)
 
+@app.route("/api/Wyoming")
+@cross_origin()
+def state():
+    state_info = db.State_EnergyData_2018.find({"State Name": "Wyoming"})
+    return jsonify(state_info)
 
 if __name__=="__main__":
     app.run(debug=True)

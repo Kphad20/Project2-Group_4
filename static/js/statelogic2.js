@@ -4,15 +4,17 @@ const params = new URLSearchParams(window.location.search)
 const satename = params.get('name');
 console.log(satename);
 
-var url_ranking = `http://localhost:5000/state/ranking?name=${satename}`
-d3.json(url_ranking)
-    .then(data => {
-        // console.log("Hello")
-        console.log(data);
-    });
-// d3.json("localhost:5000/state/ranking?name=nj").then(data=>{
-//     console.log(data)
-// })
+function createData1() {
+    var url_ranking = `http://localhost:5000/state/ranking?name=${satename}`
+    d3.json(url_ranking)
+        .then(data => {
+            // console.log("Hello")
+            console.log(data);
+        });
+    // d3.json("localhost:5000/state/ranking?name=nj").then(data=>{
+    //     console.log(data)
+    // })
+}
 
 function createData() {
     const url_productionsource = `http://localhost:5000/state/production?name=${satename}`
@@ -31,22 +33,31 @@ var StateProdConsURL = `http://localhost:5000/state/ranking?name=${satename}`;
 function stateSummary() {
     console.log("hello1");
     // read the data
-    d3.json(StateProdConsURL).then(function(StatePCdata) {
-        // d3.json(StateEnergySourceURL, StatePCdata => {
-        console.log(StatePCdata)
-            // var allStates = StatePCdata['State Name'];
-            // var selState = allStates.filter(selectedState => selectedState == StatePCdata['State Name']);
-            // // var StateIndex = allStates.indexOf(selState[0])
-            // var CO2Emissions = StatePCdata['Carbon Dioxide Emission']
-            // var CO2EmissionsRank = StatePCdata['Carbon Dioxide Emission Rank']
-            // var consumptionPerCapita = StatePCdata['Consumption per capita']
-            // var consumptionRank = StatePCdata['Consumption Rank']
-            // var expendituresperCapita = StatePCdata['Expenditure per capita']
-            // var expendituresRank = StatePCdata['Expenditure Rank']
-            // var productionShare = StatePCdata['Production Share']
-            // var productionRank = StatePCdata["Production Rank"]
+    d3.json(StateProdConsURL).then(function(StatePCdata2) {
 
+        console.log(StatePCdata2)
+        var StatePCdata = StatePCdata2[0];
 
+        var CO2Emissions = StatePCdata['Carbon Dioxide Emission']
+        var CO2EmissionsRank = StatePCdata['Carbon Dioxide Emission Rank']
+        var consumptionPerCapita = StatePCdata['Consumption per capita']
+        var consumptionRank = StatePCdata['Consumption Rank']
+        var expendituresperCapita = StatePCdata['Expenditure per capita']
+        var expendituresRank = StatePCdata['Expenditure Rank']
+        var productionShare = StatePCdata['Production Share']
+        var productionRank = StatePCdata["Production Rank"]
+
+        var tableDataArr = [
+
+            CO2Emissions, // 1
+            CO2EmissionsRank, // 2
+            consumptionPerCapita, // 3
+            consumptionRank, // 4
+            expendituresperCapita, //5
+            expendituresRank, //6
+            productionShare, //7
+            productionRank
+        ]
 
         // select the demographic table
         var getSummary = d3.select("#state-table");
@@ -55,7 +66,7 @@ function stateSummary() {
         getSummary.html("");
 
         // loop through the info in the metadata and append results to table
-        Object.entries(StatePCdata).forEach((key) => {
+        Object.entries(StatePCdata).slice(0, -2).forEach((key) => {
             console.log(key)
             getSummary.append("h6").text(key[0] + ": " + key[1] + "\n");
         });
@@ -68,8 +79,8 @@ function buildCharts() {
         console.log(stateEData2[0]);
 
         var stateEData = stateEData2[0];
-        var pielabels = Object.entries(stateEData).map(key =>
-            key)
+        // var pielabels = Object.entries(stateEData).map(key =>
+        //     key)
 
         ;
         var coal = stateEData["Fossil Fuel - Coal"]; //["Fossil Fuel - Coal"]
@@ -148,7 +159,7 @@ function init() {
     buildCharts();
     stateSummary();
     createData();
-
+    createData1();
 };
 
 

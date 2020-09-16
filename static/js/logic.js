@@ -10,12 +10,12 @@ var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/
   accessToken: API_KEY
 });
 
-// Initialize all of the LayerGroups
-// var layers = {
-//   CONSUMPTION = new L.LayerGroup(),
-//   PRODUCTION = new L.LayerGroup(),
-//   EMISSIONS = new L.LayerGroup()
-// };
+//Initialize all of the LayerGroups
+var layers = {
+  CONSUMPTION : new L.LayerGroup(),
+  PRODUCTION : new L.LayerGroup(),
+  EMISSIONS : new L.LayerGroup()
+};
 
 // Define a map object
 var myMap = L.map("map", {
@@ -29,59 +29,80 @@ var myMap = L.map("map", {
 
 lightmap.addTo(myMap);
 
-// Create an overlay object
-// var overlays = {
-//   "Production": layers.PRODUCTION,
-//   "Consumption": layers.CONSUMPTION,
-//   "Emissions": layers.EMISSIONS
-// };
+// Create an overlays object to add to layer control
+var overlays = {
+  "Production": layers.PRODUCTION,
+  "Consumption": layers.CONSUMPTION,
+  "Emissions": layers.EMISSIONS
+};
 
 // Pass our map layers into our layer control
 // Add the layer control to the map
-// L.control.layers(null, overlays, {
-//   collapsed: false
-// });
+L.control.layers(null, overlays, {
+  collapsed: false
+});
 
-// var info = L.control({
-//   position: "bottomright"
-// });
+var info = L.control({
+  position: "bottomright"
+});
 
 // // When the layer control is added, insert a div with the class of "legend"
-// info.onAdd = function() {
-//   var div = L.DomUtil.create("div", "legend");
-//   return div;
-// };
+info.onAdd = function() {
+  var div = L.DomUtil.create("div", "legend");
+  return div;
+};
 // // Add the info legend to the map
-// info.addTo(myMap);
+info.addTo(myMap);
 
-var url = "data/states.geojson";
+var path = "data/states.geojson";
 
 var geojson;
 
-d3.json(url, function(err, data) {
-  console.log(data);
+d3.json(path, function(err, data) {
   if(err) console.log("error fetching data");
+  d3.json("http://localhost:5000", function(energyData) {
 
-  function statedata(){
-    console.log("Inside - On click method")
-    var currenturl=window.location.href;
-    console.log(currenturl)
-    var newurl=currenturl+"statedata.html"
-    window.location.href = newurl;
-  }
-// d3.json("http://localhost:5000/api", function(data) {
+    function statedata(){
+      console.log("Inside - On click method")
+      var currenturl=window.location.href;
+      console.log(currenturl)
+      var newurl=currenturl+"statedata.html?name=wy"
+      window.location.href = newurl;
+    }
+  
+      PRODUCTION = [];
+      CONSUMPTION = [];
+      EMISSIONS = [];
+  
+      for (var i = 0; i < energyData.length; i++) {
+        var production = energyData[i]["Production Share"];
+        var consumption = energyData[i]["Consumption per capita"];
+        var emissions = energyData[i]["Carbon Dioxide Emission"];
 
-  geojson = L.choropleth(data, {
+        PRODUCTION.push(
+          production
+        );
+
+        CONSUMPTION.push(
+          consumption
+        );
+
+        EMISSIONS.push(
+          emissions
+        );
+
+        console.log(PRODUCTION);
+        console.log(CONSUMPTION);
+        console.log(EMISSIONS)};
+
+      geojson = L.choropleth(data, {
+        
         // Define what property in the features to use
         valueProperty: "CENSUSAREA",
 
         // Set color scale
         scale: ["#ffffb2", "#b10026"],
-    
-        // Number of breaks in step range
-        steps: 10,
-    
-        // q for quartile, e for equidistant, k for k-means
+        steps: 5,
         mode: "q",
         style: {
           // Border color
@@ -90,12 +111,29 @@ d3.json(url, function(err, data) {
           fillOpacity: 0.8
         },
 
-        // Binding a pop-up to each layer
         onEachFeature: function(feature, layer) {
-        layer.bindTooltip(feature.properties.NAME)        
-        }
-  }).addTo(myMap);
 
-  myMap.on('click', statedata);
+          // Set mouse events to change map styling on mouseover and mouseout
+          layer.on({
+            mouseover: function(event) {
+              layer = event.target;
+              layer.setStyle({
+                fillOpacity: 1
+              });
+            },
+            mouseout: function(event) {
+              layer = event.target;
+              layer.setStyle({
+                fillOpacity: 0.8
+              });
+            }
+          });
 
+          // Binding a pop-up to each layer
+          layer.bindTooltip(feature.properties.NAME);
+          },
+      }).addTo(myMap);
+
+    myMap.on('click', statedata);
+  });
 });

@@ -58,8 +58,16 @@ var geojson;
 
 d3.json(path, function(err, data) {
   if(err) console.log("error fetching data");
-  d3.json("http://localhost:5000/api", function(energyData) {
+  d3.json("http://localhost:5000", function(energyData) {
 
+    function statedata(statename){
+      //console.log("Inside - On click method")
+      var currenturl=window.location.href;
+      console.log(currenturl)
+      var newurl=currenturl+`statedata.html?name=${statename}`
+      window.location.href = newurl;
+    }
+  
       geojson = L.choropleth(data, {
         
         // Define what property in the features to use
@@ -91,6 +99,10 @@ d3.json(path, function(err, data) {
               layer.setStyle({
                 fillOpacity: 0.8
               });
+            },
+            click:function(event){
+              console.log(event.target.feature.properties.NAME)
+              statedata(event.target.feature.properties.NAME)
             }
           });
 

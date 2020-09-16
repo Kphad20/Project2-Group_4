@@ -1,0 +1,19 @@
+body {
+  padding: 20px;
+  margin: 0;
+}
+
+#map {
+  width: 100%;
+  height: 600px;
+}
+
+.leaflet-popup-content {
+  text-align: center;
+}
+
+#heading {
+  background-color: rgb(253, 253, 253);
+  background-image: url("../images/lines.jpg");
+}
+

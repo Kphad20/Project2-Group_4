@@ -1,0 +1,1279 @@
+[{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777a6"
+  },
+  "Year": 1949,
+  "Wood Energy Production": 1549.2620000000002,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1549.2620000000002,
+  "Total Renewable Energy Production": 2973.9840000000004,
+  "Hydroelectric Power Consumption": 1424.7220000000002,
+  "Geothermal Energy Consumption": null,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1549.2620000000002,
+  "Waste Energy Consumption": null,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1549.2620000000002,
+  "Total Renewable Energy Consumption": 2973.9840000000004
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777a7"
+  },
+  "Year": 1950,
+  "Wood Energy Production": 1562.307,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1562.307,
+  "Total Renewable Energy Production": 2977.718,
+  "Hydroelectric Power Consumption": 1415.411,
+  "Geothermal Energy Consumption": null,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1562.307,
+  "Waste Energy Consumption": null,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1562.307,
+  "Total Renewable Energy Consumption": 2977.718
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777a8"
+  },
+  "Year": 1951,
+  "Wood Energy Production": 1534.6689999999999,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1534.6689999999999,
+  "Total Renewable Energy Production": 2958.4640000000004,
+  "Hydroelectric Power Consumption": 1423.795,
+  "Geothermal Energy Consumption": null,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1534.6689999999999,
+  "Waste Energy Consumption": null,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1534.6689999999999,
+  "Total Renewable Energy Consumption": 2958.4640000000004
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777a9"
+  },
+  "Year": 1952,
+  "Wood Energy Production": 1474.369,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1474.369,
+  "Total Renewable Energy Production": 2940.1809999999996,
+  "Hydroelectric Power Consumption": 1465.8120000000001,
+  "Geothermal Energy Consumption": null,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1474.369,
+  "Waste Energy Consumption": null,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1474.369,
+  "Total Renewable Energy Consumption": 2940.1809999999996
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777aa"
+  },
+  "Year": 1953,
+  "Wood Energy Production": 1418.601,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1418.601,
+  "Total Renewable Energy Production": 2831.46,
+  "Hydroelectric Power Consumption": 1412.859,
+  "Geothermal Energy Consumption": null,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1418.601,
+  "Waste Energy Consumption": null,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1418.601,
+  "Total Renewable Energy Consumption": 2831.46
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777ab"
+  },
+  "Year": 1954,
+  "Wood Energy Production": 1394.3270000000002,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1394.3270000000002,
+  "Total Renewable Energy Production": 2754.099,
+  "Hydroelectric Power Consumption": 1359.7720000000002,
+  "Geothermal Energy Consumption": null,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1394.3270000000002,
+  "Waste Energy Consumption": null,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1394.3270000000002,
+  "Total Renewable Energy Consumption": 2754.099
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777ac"
+  },
+  "Year": 1955,
+  "Wood Energy Production": 1424.1429999999998,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1424.1429999999998,
+  "Total Renewable Energy Production": 2783.987,
+  "Hydroelectric Power Consumption": 1359.844,
+  "Geothermal Energy Consumption": null,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1424.1429999999998,
+  "Waste Energy Consumption": null,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1424.1429999999998,
+  "Total Renewable Energy Consumption": 2783.987
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777ad"
+  },
+  "Year": 1956,
+  "Wood Energy Production": 1415.871,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1415.871,
+  "Total Renewable Energy Production": 2850.5820000000003,
+  "Hydroelectric Power Consumption": 1434.711,
+  "Geothermal Energy Consumption": null,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1415.871,
+  "Waste Energy Consumption": null,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1415.871,
+  "Total Renewable Energy Consumption": 2850.5820000000003
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777ae"
+  },
+  "Year": 1957,
+  "Wood Energy Production": 1333.5810000000001,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1333.5810000000001,
+  "Total Renewable Energy Production": 2849.1940000000004,
+  "Hydroelectric Power Consumption": 1515.6129999999998,
+  "Geothermal Energy Consumption": null,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1333.5810000000001,
+  "Waste Energy Consumption": null,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1333.5810000000001,
+  "Total Renewable Energy Consumption": 2849.1940000000004
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777af"
+  },
+  "Year": 1958,
+  "Wood Energy Production": 1323.1229999999998,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1323.1229999999998,
+  "Total Renewable Energy Production": 2915.09,
+  "Hydroelectric Power Consumption": 1591.967,
+  "Geothermal Energy Consumption": null,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1323.1229999999998,
+  "Waste Energy Consumption": null,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1323.1229999999998,
+  "Total Renewable Energy Consumption": 2915.09
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777b0"
+  },
+  "Year": 1959,
+  "Wood Energy Production": 1352.874,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1352.874,
+  "Total Renewable Energy Production": 2901.3390000000004,
+  "Hydroelectric Power Consumption": 1548.465,
+  "Geothermal Energy Consumption": null,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1352.874,
+  "Waste Energy Consumption": null,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1352.874,
+  "Total Renewable Energy Consumption": 2901.3390000000004
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777b1"
+  },
+  "Year": 1960,
+  "Wood Energy Production": 1319.87,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1319.87,
+  "Total Renewable Energy Production": 2928.204,
+  "Hydroelectric Power Consumption": 1607.975,
+  "Geothermal Energy Consumption": 0.359,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1319.87,
+  "Waste Energy Consumption": null,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1319.87,
+  "Total Renewable Energy Consumption": 2928.204
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777b2"
+  },
+  "Year": 1961,
+  "Wood Energy Production": 1294.762,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1294.762,
+  "Total Renewable Energy Production": 2952.2259999999997,
+  "Hydroelectric Power Consumption": 1656.463,
+  "Geothermal Energy Consumption": 1.001,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1294.762,
+  "Waste Energy Consumption": null,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1294.762,
+  "Total Renewable Energy Consumption": 2952.2259999999997
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777b3"
+  },
+  "Year": 1962,
+  "Wood Energy Production": 1300.242,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1300.242,
+  "Total Renewable Energy Production": 3117.4440000000004,
+  "Hydroelectric Power Consumption": 1816.141,
+  "Geothermal Energy Consumption": 1.061,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1300.242,
+  "Waste Energy Consumption": null,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1300.242,
+  "Total Renewable Energy Consumption": 3117.4440000000004
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777b4"
+  },
+  "Year": 1963,
+  "Wood Energy Production": 1323.316,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1323.316,
+  "Total Renewable Energy Production": 3096.4309999999996,
+  "Hydroelectric Power Consumption": 1771.355,
+  "Geothermal Energy Consumption": 1.76,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1323.316,
+  "Waste Energy Consumption": null,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1323.316,
+  "Total Renewable Energy Consumption": 3096.4309999999996
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777b5"
+  },
+  "Year": 1964,
+  "Wood Energy Production": 1336.8020000000001,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1336.8020000000001,
+  "Total Renewable Energy Production": 3225.248,
+  "Hydroelectric Power Consumption": 1886.3139999999999,
+  "Geothermal Energy Consumption": 2.132,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1336.8020000000001,
+  "Waste Energy Consumption": null,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1336.8020000000001,
+  "Total Renewable Energy Consumption": 3225.248
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777b6"
+  },
+  "Year": 1965,
+  "Wood Energy Production": 1334.761,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1334.761,
+  "Total Renewable Energy Production": 3395.816,
+  "Hydroelectric Power Consumption": 2059.077,
+  "Geothermal Energy Consumption": 1.978,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1334.761,
+  "Waste Energy Consumption": null,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1334.761,
+  "Total Renewable Energy Consumption": 3395.816
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777b7"
+  },
+  "Year": 1966,
+  "Wood Energy Production": 1368.985,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1368.985,
+  "Total Renewable Energy Production": 3432.462,
+  "Hydroelectric Power Consumption": 2061.519,
+  "Geothermal Energy Consumption": 1.958,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1368.985,
+  "Waste Energy Consumption": null,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1368.985,
+  "Total Renewable Energy Consumption": 3432.462
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777b8"
+  },
+  "Year": 1967,
+  "Wood Energy Production": 1340.249,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1340.249,
+  "Total Renewable Energy Production": 3690.2129999999997,
+  "Hydroelectric Power Consumption": 2346.6639999999998,
+  "Geothermal Energy Consumption": 3.3,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1340.249,
+  "Waste Energy Consumption": null,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1340.249,
+  "Total Renewable Energy Consumption": 3690.2129999999997
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777b9"
+  },
+  "Year": 1968,
+  "Wood Energy Production": 1419.495,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1419.495,
+  "Total Renewable Energy Production": 3772.656,
+  "Hydroelectric Power Consumption": 2348.629,
+  "Geothermal Energy Consumption": 4.532,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1419.495,
+  "Waste Energy Consumption": null,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1419.495,
+  "Total Renewable Energy Consumption": 3772.656
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777ba"
+  },
+  "Year": 1969,
+  "Wood Energy Production": 1440.487,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1440.487,
+  "Total Renewable Energy Production": 4094.8920000000003,
+  "Hydroelectric Power Consumption": 2647.9829999999997,
+  "Geothermal Energy Consumption": 6.422,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1440.487,
+  "Waste Energy Consumption": null,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1440.487,
+  "Total Renewable Energy Consumption": 4094.8920000000003
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777bb"
+  },
+  "Year": 1970,
+  "Wood Energy Production": 1428.649,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1430.9620000000002,
+  "Total Renewable Energy Production": 4070.0209999999997,
+  "Hydroelectric Power Consumption": 2633.547,
+  "Geothermal Energy Consumption": 5.511,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1428.649,
+  "Waste Energy Consumption": 2.313,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1430.9620000000002,
+  "Total Renewable Energy Consumption": 4070.0209999999997
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777bc"
+  },
+  "Year": 1971,
+  "Wood Energy Production": 1430.229,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1432.3229999999999,
+  "Total Renewable Energy Production": 4262.213,
+  "Hydroelectric Power Consumption": 2824.151,
+  "Geothermal Energy Consumption": 5.739,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1430.229,
+  "Waste Energy Consumption": 2.094,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1432.3229999999999,
+  "Total Renewable Energy Consumption": 4262.213
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777bd"
+  },
+  "Year": 1972,
+  "Wood Energy Production": 1500.9920000000002,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1503.065,
+  "Total Renewable Energy Production": 4382.009,
+  "Hydroelectric Power Consumption": 2863.865,
+  "Geothermal Energy Consumption": 15.079,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1500.9920000000002,
+  "Waste Energy Consumption": 2.073,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1503.065,
+  "Total Renewable Energy Consumption": 4382.009
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777be"
+  },
+  "Year": 1973,
+  "Wood Energy Production": 1527.0120000000002,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1529.068,
+  "Total Renewable Energy Production": 4410.938,
+  "Hydroelectric Power Consumption": 2861.448,
+  "Geothermal Energy Consumption": 20.422,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1527.0120000000002,
+  "Waste Energy Consumption": 2.056,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1529.068,
+  "Total Renewable Energy Consumption": 4410.938
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777bf"
+  },
+  "Year": 1974,
+  "Wood Energy Production": 1537.76,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1539.662,
+  "Total Renewable Energy Production": 4741.852,
+  "Hydroelectric Power Consumption": 3176.58,
+  "Geothermal Energy Consumption": 25.61,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1537.76,
+  "Waste Energy Consumption": 1.902,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1539.662,
+  "Total Renewable Energy Consumption": 4741.852
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777c0"
+  },
+  "Year": 1975,
+  "Wood Energy Production": 1496.9279999999999,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1498.734,
+  "Total Renewable Energy Production": 4687.12,
+  "Hydroelectric Power Consumption": 3154.607,
+  "Geothermal Energy Consumption": 33.78,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1496.9279999999999,
+  "Waste Energy Consumption": 1.806,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1498.734,
+  "Total Renewable Energy Consumption": 4687.12
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777c1"
+  },
+  "Year": 1976,
+  "Wood Energy Production": 1711.484,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1713.3729999999998,
+  "Total Renewable Energy Production": 4727.151,
+  "Hydroelectric Power Consumption": 2976.265,
+  "Geothermal Energy Consumption": 37.513,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1711.484,
+  "Waste Energy Consumption": 1.889,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1713.3729999999998,
+  "Total Renewable Energy Consumption": 4727.151
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777c2"
+  },
+  "Year": 1977,
+  "Wood Energy Production": 1836.524,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 1838.332,
+  "Total Renewable Energy Production": 4208.965999999999,
+  "Hydroelectric Power Consumption": 2333.252,
+  "Geothermal Energy Consumption": 37.382,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 1836.524,
+  "Waste Energy Consumption": 1.808,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 1838.332,
+  "Total Renewable Energy Consumption": 4208.965999999999
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777c3"
+  },
+  "Year": 1978,
+  "Wood Energy Production": 2036.15,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 2037.605,
+  "Total Renewable Energy Production": 5005.44,
+  "Hydroelectric Power Consumption": 2936.9829999999997,
+  "Geothermal Energy Consumption": 30.851,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 2036.15,
+  "Waste Energy Consumption": 1.455,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 2037.605,
+  "Total Renewable Energy Consumption": 5005.44
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777c4"
+  },
+  "Year": 1979,
+  "Wood Energy Production": 2149.854,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 2151.906,
+  "Total Renewable Energy Production": 5122.854,
+  "Hydroelectric Power Consumption": 2930.6859999999997,
+  "Geothermal Energy Consumption": 40.262,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 2149.854,
+  "Waste Energy Consumption": 2.052,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 2151.906,
+  "Total Renewable Energy Consumption": 5122.854
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777c5"
+  },
+  "Year": 1980,
+  "Wood Energy Production": 2473.861,
+  "Biofuels Production": null,
+  "Total Biomass Energy Production": 2475.5,
+  "Total Renewable Energy Production": 5428.342,
+  "Hydroelectric Power Consumption": 2900.1440000000002,
+  "Geothermal Energy Consumption": 52.699,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 2473.861,
+  "Waste Energy Consumption": 1.639,
+  "Biofuels Consumption": null,
+  "Total Biomass Energy Consumption": 2475.5,
+  "Total Renewable Energy Consumption": 5428.342
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777c6"
+  },
+  "Year": 1981,
+  "Wood Energy Production": 2495.563,
+  "Biofuels Production": 12.72,
+  "Total Biomass Energy Production": 2596.283,
+  "Total Renewable Energy Production": 5413.688,
+  "Hydroelectric Power Consumption": 2757.968,
+  "Geothermal Energy Consumption": 59.437,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 2495.563,
+  "Waste Energy Consumption": 88,
+  "Biofuels Consumption": 12.72,
+  "Total Biomass Energy Consumption": 2596.283,
+  "Total Renewable Energy Consumption": 5413.688
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777c7"
+  },
+  "Year": 1982,
+  "Wood Energy Production": 2510.048,
+  "Biofuels Production": 34.404,
+  "Total Biomass Energy Production": 2663.452,
+  "Total Renewable Energy Production": 5979.637,
+  "Hydroelectric Power Consumption": 3265.558,
+  "Geothermal Energy Consumption": 50.627,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": null,
+  "Wood Energy Consumption": 2510.048,
+  "Waste Energy Consumption": 119,
+  "Biofuels Consumption": 34.404,
+  "Total Biomass Energy Consumption": 2663.452,
+  "Total Renewable Energy Consumption": 5979.637
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777c8"
+  },
+  "Year": 1983,
+  "Wood Energy Production": 2684.2709999999997,
+  "Biofuels Production": 63.143,
+  "Total Biomass Energy Production": 2904.414,
+  "Total Renewable Energy Production": 6495.611999999999,
+  "Hydroelectric Power Consumption": 3527.26,
+  "Geothermal Energy Consumption": 63.91,
+  "Solar Energy Consumption": null,
+  "Wind Energy Consumption": 0.028,
+  "Wood Energy Consumption": 2684.2709999999997,
+  "Waste Energy Consumption": 157,
+  "Biofuels Consumption": 63.143,
+  "Total Biomass Energy Consumption": 2904.414,
+  "Total Renewable Energy Consumption": 6495.611999999999
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777c9"
+  },
+  "Year": 1984,
+  "Wood Energy Production": 2685.817,
+  "Biofuels Production": 77.302,
+  "Total Biomass Energy Production": 2971.12,
+  "Total Renewable Energy Production": 6437.8640000000005,
+  "Hydroelectric Power Consumption": 3385.8109999999997,
+  "Geothermal Energy Consumption": 80.811,
+  "Solar Energy Consumption": 0.055,
+  "Wind Energy Consumption": 0.068,
+  "Wood Energy Consumption": 2685.817,
+  "Waste Energy Consumption": 208,
+  "Biofuels Consumption": 77.302,
+  "Total Biomass Energy Consumption": 2971.12,
+  "Total Renewable Energy Consumption": 6437.8640000000005
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777ca"
+  },
+  "Year": 1985,
+  "Wood Energy Production": 2686.765,
+  "Biofuels Production": 93.151,
+  "Total Biomass Energy Production": 3016.2329999999997,
+  "Total Renewable Energy Production": 6084.017,
+  "Hydroelectric Power Consumption": 2970.192,
+  "Geothermal Energy Consumption": 97.421,
+  "Solar Energy Consumption": 0.111,
+  "Wind Energy Consumption": 0.06,
+  "Wood Energy Consumption": 2686.765,
+  "Waste Energy Consumption": 236.317,
+  "Biofuels Consumption": 93.151,
+  "Total Biomass Energy Consumption": 3016.2329999999997,
+  "Total Renewable Energy Consumption": 6084.017
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777cb"
+  },
+  "Year": 1986,
+  "Wood Energy Production": 2562.134,
+  "Biofuels Production": 107.099,
+  "Total Biomass Energy Production": 2932.095,
+  "Total Renewable Energy Production": 6111.14,
+  "Hydroelectric Power Consumption": 3071.179,
+  "Geothermal Energy Consumption": 107.677,
+  "Solar Energy Consumption": 0.147,
+  "Wind Energy Consumption": 0.044,
+  "Wood Energy Consumption": 2562.134,
+  "Waste Energy Consumption": 262.861,
+  "Biofuels Consumption": 107.099,
+  "Total Biomass Energy Consumption": 2932.095,
+  "Total Renewable Energy Consumption": 6111.14
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777cc"
+  },
+  "Year": 1987,
+  "Wood Energy Production": 2463.159,
+  "Biofuels Production": 122.725,
+  "Total Biomass Energy Production": 2874.884,
+  "Total Renewable Energy Production": 5621.807,
+  "Hydroelectric Power Consumption": 2634.508,
+  "Geothermal Energy Consumption": 112.27,
+  "Solar Energy Consumption": 0.109,
+  "Wind Energy Consumption": 0.037,
+  "Wood Energy Consumption": 2463.159,
+  "Waste Energy Consumption": 289,
+  "Biofuels Consumption": 122.725,
+  "Total Biomass Energy Consumption": 2874.884,
+  "Total Renewable Energy Consumption": 5621.807
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777cd"
+  },
+  "Year": 1988,
+  "Wood Energy Production": 2576.663,
+  "Biofuels Production": 124.058,
+  "Total Biomass Energy Production": 3016.0490000000004,
+  "Total Renewable Energy Production": 5456.754,
+  "Hydroelectric Power Consumption": 2334.265,
+  "Geothermal Energy Consumption": 106.338,
+  "Solar Energy Consumption": 0.094,
+  "Wind Energy Consumption": 0.009,
+  "Wood Energy Consumption": 2576.663,
+  "Waste Energy Consumption": 315.328,
+  "Biofuels Consumption": 124.058,
+  "Total Biomass Energy Consumption": 3016.0490000000004,
+  "Total Renewable Energy Consumption": 5456.754
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777ce"
+  },
+  "Year": 1989,
+  "Wood Energy Production": 2679.623,
+  "Biofuels Production": 125.378,
+  "Total Biomass Energy Production": 3159.357,
+  "Total Renewable Energy Production": 6234.658,
+  "Hydroelectric Power Consumption": 2837.263,
+  "Geothermal Energy Consumption": 161.539,
+  "Solar Energy Consumption": 54.466,
+  "Wind Energy Consumption": 22.033,
+  "Wood Energy Consumption": 2679.623,
+  "Waste Energy Consumption": 354.356,
+  "Biofuels Consumption": 125.378,
+  "Total Biomass Energy Consumption": 3159.357,
+  "Total Renewable Energy Consumption": 6234.658
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777cf"
+  },
+  "Year": 1990,
+  "Wood Energy Production": 2216.166,
+  "Biofuels Production": 110.867,
+  "Total Biomass Energy Production": 2735.112,
+  "Total Renewable Energy Production": 6040.024,
+  "Hydroelectric Power Consumption": 3046.3909999999996,
+  "Geothermal Energy Consumption": 170.747,
+  "Solar Energy Consumption": 58.768,
+  "Wind Energy Consumption": 29.007,
+  "Wood Energy Consumption": 2216.166,
+  "Waste Energy Consumption": 408.079,
+  "Biofuels Consumption": 110.867,
+  "Total Biomass Energy Consumption": 2735.112,
+  "Total Renewable Energy Consumption": 6040.024
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777d0"
+  },
+  "Year": 1991,
+  "Wood Energy Production": 2214.0820000000003,
+  "Biofuels Production": 128,
+  "Total Biomass Energy Production": 2781.797,
+  "Total Renewable Energy Production": 6067.785,
+  "Hydroelectric Power Consumption": 3015.9429999999998,
+  "Geothermal Energy Consumption": 177.626,
+  "Solar Energy Consumption": 61.623,
+  "Wind Energy Consumption": 30.796,
+  "Wood Energy Consumption": 2214.0820000000003,
+  "Waste Energy Consumption": 439.715,
+  "Biofuels Consumption": 128,
+  "Total Biomass Energy Consumption": 2781.797,
+  "Total Renewable Energy Consumption": 6067.785
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777d1"
+  },
+  "Year": 1992,
+  "Wood Energy Production": 2313.471,
+  "Biofuels Production": 145.005,
+  "Total Biomass Energy Production": 2931.678,
+  "Total Renewable Energy Production": 5820.556,
+  "Hydroelectric Power Consumption": 2617.436,
+  "Geothermal Energy Consumption": 178.699,
+  "Solar Energy Consumption": 62.88,
+  "Wind Energy Consumption": 29.863,
+  "Wood Energy Consumption": 2313.471,
+  "Waste Energy Consumption": 473.202,
+  "Biofuels Consumption": 145.005,
+  "Total Biomass Energy Consumption": 2931.678,
+  "Total Renewable Energy Consumption": 5820.556
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777d2"
+  },
+  "Year": 1993,
+  "Wood Energy Production": 2259.774,
+  "Biofuels Production": 169.336,
+  "Total Biomass Energy Production": 2908.446,
+  "Total Renewable Energy Production": 6081.909000000001,
+  "Hydroelectric Power Consumption": 2891.613,
+  "Geothermal Energy Consumption": 185.673,
+  "Solar Energy Consumption": 65.19,
+  "Wind Energy Consumption": 30.987,
+  "Wood Energy Consumption": 2259.774,
+  "Waste Energy Consumption": 479.336,
+  "Biofuels Consumption": 169.062,
+  "Total Biomass Energy Consumption": 2908.172,
+  "Total Renewable Energy Consumption": 6081.635
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777d3"
+  },
+  "Year": 1994,
+  "Wood Energy Production": 2323.82,
+  "Biofuels Production": 188.391,
+  "Total Biomass Energy Production": 3027.534,
+  "Total Renewable Energy Production": 5987.142,
+  "Hydroelectric Power Consumption": 2683.4570000000003,
+  "Geothermal Energy Consumption": 173.464,
+  "Solar Energy Consumption": 67.126,
+  "Wind Energy Consumption": 35.56,
+  "Wood Energy Consumption": 2323.82,
+  "Waste Energy Consumption": 515.323,
+  "Biofuels Consumption": 188.391,
+  "Total Biomass Energy Consumption": 3027.534,
+  "Total Renewable Energy Consumption": 5987.142
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777d4"
+  },
+  "Year": 1995,
+  "Wood Energy Production": 2369.869,
+  "Biofuels Production": 197.737,
+  "Total Biomass Energy Production": 3099.0820000000003,
+  "Total Renewable Energy Production": 6557.308000000001,
+  "Hydroelectric Power Consumption": 3205.3070000000002,
+  "Geothermal Energy Consumption": 152.057,
+  "Solar Energy Consumption": 68.233,
+  "Wind Energy Consumption": 32.63,
+  "Wood Energy Consumption": 2369.869,
+  "Waste Energy Consumption": 531.476,
+  "Biofuels Consumption": 199.797,
+  "Total Biomass Energy Consumption": 3101.1420000000003,
+  "Total Renewable Energy Consumption": 6559.369000000001
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777d5"
+  },
+  "Year": 1996,
+  "Wood Energy Production": 2437.027,
+  "Biofuels Production": 141.284,
+  "Total Biomass Energy Production": 3155.301,
+  "Total Renewable Energy Production": 7010.889,
+  "Hydroelectric Power Consumption": 3589.656,
+  "Geothermal Energy Consumption": 163.359,
+  "Solar Energy Consumption": 69.134,
+  "Wind Energy Consumption": 33.44,
+  "Wood Energy Consumption": 2437.027,
+  "Waste Energy Consumption": 576.99,
+  "Biofuels Consumption": 142.789,
+  "Total Biomass Energy Consumption": 3156.8059999999996,
+  "Total Renewable Energy Consumption": 7012.394
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777d6"
+  },
+  "Year": 1997,
+  "Wood Energy Production": 2370.991,
+  "Biofuels Production": 186.315,
+  "Total Biomass Energy Production": 3107.908,
+  "Total Renewable Energy Production": 7016.81,
+  "Hydroelectric Power Consumption": 3640.458,
+  "Geothermal Energy Consumption": 166.698,
+  "Solar Energy Consumption": 68.166,
+  "Wind Energy Consumption": 33.581,
+  "Wood Energy Consumption": 2370.991,
+  "Waste Energy Consumption": 550.602,
+  "Biofuels Consumption": 183.627,
+  "Total Biomass Energy Consumption": 3105.22,
+  "Total Renewable Energy Consumption": 7014.121999999999
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777d7"
+  },
+  "Year": 1998,
+  "Wood Energy Production": 2184.161,
+  "Biofuels Production": 202.474,
+  "Total Biomass Energy Production": 2928.93,
+  "Total Renewable Energy Production": 6492.735,
+  "Hydroelectric Power Consumption": 3297.054,
+  "Geothermal Energy Consumption": 168.45,
+  "Solar Energy Consumption": 67.449,
+  "Wind Energy Consumption": 30.853,
+  "Wood Energy Consumption": 2184.161,
+  "Waste Energy Consumption": 542.295,
+  "Biofuels Consumption": 201.034,
+  "Total Biomass Energy Consumption": 2927.49,
+  "Total Renewable Energy Consumption": 6491.295999999999
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777d8"
+  },
+  "Year": 1999,
+  "Wood Energy Production": 2214.167,
+  "Biofuels Production": 210.809,
+  "Total Biomass Energy Production": 2965.132,
+  "Total Renewable Energy Production": 6515.588000000001,
+  "Hydroelectric Power Consumption": 3267.575,
+  "Geothermal Energy Consumption": 170.921,
+  "Solar Energy Consumption": 66.066,
+  "Wind Energy Consumption": 45.894,
+  "Wood Energy Consumption": 2214.167,
+  "Waste Energy Consumption": 540.156,
+  "Biofuels Consumption": 208.967,
+  "Total Biomass Energy Consumption": 2963.29,
+  "Total Renewable Energy Consumption": 6513.746999999999
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777d9"
+  },
+  "Year": 2000,
+  "Wood Energy Production": 2261.715,
+  "Biofuels Production": 233.146,
+  "Total Biomass Energy Production": 3005.6609999999996,
+  "Total Renewable Energy Production": 6101.6669999999995,
+  "Hydroelectric Power Consumption": 2811.116,
+  "Geothermal Energy Consumption": 164.364,
+  "Solar Energy Consumption": 63.469,
+  "Wind Energy Consumption": 57.057,
+  "Wood Energy Consumption": 2261.715,
+  "Waste Energy Consumption": 510.8,
+  "Biofuels Consumption": 235.712,
+  "Total Biomass Energy Consumption": 3008.2270000000003,
+  "Total Renewable Energy Consumption": 6104.234
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777da"
+  },
+  "Year": 2001,
+  "Wood Energy Production": 2005.8339999999998,
+  "Biofuels Production": 254.453,
+  "Total Biomass Energy Production": 2624.1620000000003,
+  "Total Renewable Energy Production": 5161.772,
+  "Hydroelectric Power Consumption": 2241.8579999999997,
+  "Geothermal Energy Consumption": 164.461,
+  "Solar Energy Consumption": 61.674,
+  "Wind Energy Consumption": 69.617,
+  "Wood Energy Consumption": 2005.8339999999998,
+  "Waste Energy Consumption": 363.875,
+  "Biofuels Consumption": 252.647,
+  "Total Biomass Energy Consumption": 2622.3559999999998,
+  "Total Renewable Energy Consumption": 5159.965999999999
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777db"
+  },
+  "Year": 2002,
+  "Wood Energy Production": 1995.2839999999999,
+  "Biofuels Production": 308.118,
+  "Total Biomass Energy Production": 2705.406,
+  "Total Renewable Energy Production": 5730.901999999999,
+  "Hydroelectric Power Consumption": 2689.0170000000003,
+  "Geothermal Energy Consumption": 171.164,
+  "Solar Energy Consumption": 59.98,
+  "Wind Energy Consumption": 105.334,
+  "Wood Energy Consumption": 1995.2839999999999,
+  "Waste Energy Consumption": 402.004,
+  "Biofuels Consumption": 303.333,
+  "Total Biomass Energy Consumption": 2700.6209999999996,
+  "Total Renewable Energy Consumption": 5726.116
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777dc"
+  },
+  "Year": 2003,
+  "Wood Energy Production": 2002.037,
+  "Biofuels Production": 401.394,
+  "Total Biomass Energy Production": 2804.778,
+  "Total Renewable Energy Production": 5942.467,
+  "Hydroelectric Power Consumption": 2792.539,
+  "Geothermal Energy Consumption": 173.445,
+  "Solar Energy Consumption": 58.432,
+  "Wind Energy Consumption": 113.273,
+  "Wood Energy Consumption": 2002.037,
+  "Waste Energy Consumption": 401.347,
+  "Biofuels Consumption": 403.087,
+  "Total Biomass Energy Consumption": 2806.4709999999995,
+  "Total Renewable Energy Consumption": 5944.16
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777dd"
+  },
+  "Year": 2004,
+  "Wood Energy Production": 2121.252,
+  "Biofuels Production": 485.722,
+  "Total Biomass Energy Production": 2996.0170000000003,
+  "Total Renewable Energy Production": 6062.670999999999,
+  "Hydroelectric Power Consumption": 2688.468,
+  "Geothermal Energy Consumption": 178.147,
+  "Solar Energy Consumption": 58.376,
+  "Wind Energy Consumption": 141.664,
+  "Wood Energy Consumption": 2121.252,
+  "Waste Energy Consumption": 389.043,
+  "Biofuels Consumption": 497.777,
+  "Total Biomass Energy Consumption": 3008.073,
+  "Total Renewable Energy Consumption": 6074.726
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777de"
+  },
+  "Year": 2005,
+  "Wood Energy Production": 2136.697,
+  "Biofuels Production": 561.27,
+  "Total Biomass Energy Production": 3101.1859999999997,
+  "Total Renewable Energy Production": 6220.812,
+  "Hydroelectric Power Consumption": 2702.942,
+  "Geothermal Energy Consumption": 180.703,
+  "Solar Energy Consumption": 57.893,
+  "Wind Energy Consumption": 178.088,
+  "Wood Energy Consumption": 2136.697,
+  "Waste Energy Consumption": 403.219,
+  "Biofuels Consumption": 574.014,
+  "Total Biomass Energy Consumption": 3113.93,
+  "Total Renewable Energy Consumption": 6233.556
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777df"
+  },
+  "Year": 2006,
+  "Wood Energy Production": 2099.319,
+  "Biofuels Production": 715.635,
+  "Total Biomass Energy Production": 3211.515,
+  "Total Renewable Energy Production": 6586.243,
+  "Hydroelectric Power Consumption": 2869.035,
+  "Geothermal Energy Consumption": 181.2,
+  "Solar Energy Consumption": 60.755,
+  "Wind Energy Consumption": 263.738,
+  "Wood Energy Consumption": 2099.319,
+  "Waste Energy Consumption": 396.561,
+  "Biofuels Consumption": 766.26,
+  "Total Biomass Energy Consumption": 3262.14,
+  "Total Renewable Energy Consumption": 6636.868
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777e0"
+  },
+  "Year": 2007,
+  "Wood Energy Production": 2088.775,
+  "Biofuels Production": 970.07,
+  "Total Biomass Energy Production": 3472.08,
+  "Total Renewable Energy Production": 6510.366999999999,
+  "Hydroelectric Power Consumption": 2446.389,
+  "Geothermal Energy Consumption": 185.774,
+  "Solar Energy Consumption": 65.621,
+  "Wind Energy Consumption": 340.503,
+  "Wood Energy Consumption": 2088.775,
+  "Waste Energy Consumption": 413.235,
+  "Biofuels Consumption": 982.814,
+  "Total Biomass Energy Consumption": 3484.824,
+  "Total Renewable Energy Consumption": 6523.11
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777e1"
+  },
+  "Year": 2008,
+  "Wood Energy Production": 2058.985,
+  "Biofuels Production": 1374.001,
+  "Total Biomass Energy Production": 3868.25,
+  "Total Renewable Energy Production": 7191.545999999999,
+  "Hydroelectric Power Consumption": 2511.1079999999997,
+  "Geothermal Energy Consumption": 192.433,
+  "Solar Energy Consumption": 74.207,
+  "Wind Energy Consumption": 545.548,
+  "Wood Energy Consumption": 2058.985,
+  "Waste Energy Consumption": 435.263,
+  "Biofuels Consumption": 1357.144,
+  "Total Biomass Energy Consumption": 3851.3920000000003,
+  "Total Renewable Energy Consumption": 7174.689
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777e2"
+  },
+  "Year": 2009,
+  "Wood Energy Production": 1935.01,
+  "Biofuels Production": 1569.92,
+  "Total Biomass Energy Production": 3956.617,
+  "Total Renewable Energy Production": 7624.932,
+  "Hydroelectric Power Consumption": 2668.824,
+  "Geothermal Energy Consumption": 200.185,
+  "Solar Energy Consumption": 78.178,
+  "Wind Energy Consumption": 721.129,
+  "Wood Energy Consumption": 1935.01,
+  "Waste Energy Consumption": 451.687,
+  "Biofuels Consumption": 1553.312,
+  "Total Biomass Energy Consumption": 3940.009,
+  "Total Renewable Energy Consumption": 7608.3240000000005
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777e3"
+  },
+  "Year": 2010,
+  "Wood Energy Production": 2216.74,
+  "Biofuels Production": 1867.88,
+  "Total Biomass Energy Production": 4552.532,
+  "Total Renewable Energy Production": 8313.761999999999,
+  "Hydroelectric Power Consumption": 2538.541,
+  "Geothermal Energy Consumption": 207.979,
+  "Solar Energy Consumption": 91.282,
+  "Wind Energy Consumption": 923.427,
+  "Wood Energy Consumption": 2216.74,
+  "Waste Energy Consumption": 467.912,
+  "Biofuels Consumption": 1821.23,
+  "Total Biomass Energy Consumption": 4505.8820000000005,
+  "Total Renewable Energy Consumption": 8267.112
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777e4"
+  },
+  "Year": 2011,
+  "Wood Energy Production": 2213.22,
+  "Biofuels Production": 2029.308,
+  "Total Biomass Energy Production": 4704.321,
+  "Total Renewable Energy Production": 9299.548,
+  "Hydroelectric Power Consumption": 3102.8520000000003,
+  "Geothermal Energy Consumption": 212.311,
+  "Solar Energy Consumption": 112.429,
+  "Wind Energy Consumption": 1167.636,
+  "Wood Energy Consumption": 2213.22,
+  "Waste Energy Consumption": 461.793,
+  "Biofuels Consumption": 1933.919,
+  "Total Biomass Energy Consumption": 4608.932,
+  "Total Renewable Energy Consumption": 9204.16
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777e5"
+  },
+  "Year": 2012,
+  "Wood Energy Production": 2151.2129999999997,
+  "Biofuels Production": 1928.887,
+  "Total Biomass Energy Production": 4546.704000000001,
+  "Total Renewable Energy Production": 8886.018,
+  "Hydroelectric Power Consumption": 2628.702,
+  "Geothermal Energy Consumption": 211.592,
+  "Solar Energy Consumption": 158.961,
+  "Wind Energy Consumption": 1340.059,
+  "Wood Energy Consumption": 2151.2129999999997,
+  "Waste Energy Consumption": 466.604,
+  "Biofuels Consumption": 1889.988,
+  "Total Biomass Energy Consumption": 4507.805,
+  "Total Renewable Energy Consumption": 8847.119
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777e6"
+  },
+  "Year": 2013,
+  "Wood Energy Production": 2338.256,
+  "Biofuels Production": 1980.94,
+  "Total Biomass Energy Production": 4815.6320000000005,
+  "Total Renewable Energy Production": 9417.903,
+  "Hydroelectric Power Consumption": 2562.382,
+  "Geothermal Energy Consumption": 214.006,
+  "Solar Energy Consumption": 224.524,
+  "Wind Energy Consumption": 1601.359,
+  "Wood Energy Consumption": 2338.256,
+  "Waste Energy Consumption": 496.436,
+  "Biofuels Consumption": 2013.662,
+  "Total Biomass Energy Consumption": 4848.354,
+  "Total Renewable Energy Consumption": 9450.625
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777e7"
+  },
+  "Year": 2014,
+  "Wood Energy Production": 2401.078,
+  "Biofuels Production": 2103.411,
+  "Total Biomass Energy Production": 5020.366,
+  "Total Renewable Energy Production": 9766.517,
+  "Hydroelectric Power Consumption": 2466.577,
+  "Geothermal Energy Consumption": 214.49,
+  "Solar Energy Consumption": 337.543,
+  "Wind Energy Consumption": 1727.542,
+  "Wood Energy Consumption": 2401.078,
+  "Waste Energy Consumption": 515.877,
+  "Biofuels Consumption": 2077.253,
+  "Total Biomass Energy Consumption": 4994.208,
+  "Total Renewable Energy Consumption": 9740.36
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777e8"
+  },
+  "Year": 2015,
+  "Wood Energy Production": 2311.768,
+  "Biofuels Production": 2161.44,
+  "Total Biomass Energy Production": 4991.579000000001,
+  "Total Renewable Energy Production": 9728.765,
+  "Hydroelectric Power Consumption": 2321.177,
+  "Geothermal Energy Consumption": 211.836,
+  "Solar Energy Consumption": 426.867,
+  "Wind Energy Consumption": 1777.306,
+  "Wood Energy Consumption": 2311.768,
+  "Waste Energy Consumption": 518.371,
+  "Biofuels Consumption": 2153.219,
+  "Total Biomass Energy Consumption": 4983.358,
+  "Total Renewable Energy Consumption": 9720.544
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777e9"
+  },
+  "Year": 2016,
+  "Wood Energy Production": 2296.696,
+  "Biofuels Production": 2274.948,
+  "Total Biomass Energy Production": 5074.863,
+  "Total Renewable Energy Production": 10422.872,
+  "Hydroelectric Power Consumption": 2472.442,
+  "Geothermal Energy Consumption": 209.604,
+  "Solar Energy Consumption": 570.368,
+  "Wind Energy Consumption": 2095.595,
+  "Wood Energy Consumption": 2224.121,
+  "Waste Energy Consumption": 503.219,
+  "Biofuels Consumption": 2287.182,
+  "Total Biomass Energy Consumption": 5014.521,
+  "Total Renewable Energy Consumption": 10362.53
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777ea"
+  },
+  "Year": 2017,
+  "Wood Energy Production": 2259.189,
+  "Biofuels Production": 2344.298,
+  "Total Biomass Energy Production": 5098.747,
+  "Total Renewable Energy Production": 11195.923,
+  "Hydroelectric Power Consumption": 2766.967,
+  "Geothermal Energy Consumption": 210.233,
+  "Solar Energy Consumption": 777.084,
+  "Wind Energy Consumption": 2342.891,
+  "Wood Energy Consumption": 2180.563,
+  "Waste Energy Consumption": 495.26,
+  "Biofuels Consumption": 2303.518,
+  "Total Biomass Energy Consumption": 4979.34,
+  "Total Renewable Energy Consumption": 11076.515
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777eb"
+  },
+  "Year": 2018,
+  "Wood Energy Production": 2354.564,
+  "Biofuels Production": 2396.573,
+  "Total Biomass Energy Production": 5238.484,
+  "Total Renewable Energy Production": 11508.364,
+  "Hydroelectric Power Consumption": 2663.138,
+  "Geothermal Energy Consumption": 208.865,
+  "Solar Energy Consumption": 915.513,
+  "Wind Energy Consumption": 2482.364,
+  "Wood Energy Consumption": 2260.506,
+  "Waste Energy Consumption": 487.347,
+  "Biofuels Consumption": 2283.247,
+  "Total Biomass Energy Consumption": 5031.1,
+  "Total Renewable Energy Consumption": 11300.98
+},{
+  "_id": {
+    "$oid": "5f5d25c3a66a782751c777ec"
+  },
+  "Year": 2019,
+  "Wood Energy Production": 2400.8089999999997,
+  "Biofuels Production": 2327.238,
+  "Total Biomass Energy Production": 5161.181,
+  "Total Renewable Energy Production": 11636.976,
+  "Hydroelectric Power Consumption": 2491.8320000000003,
+  "Geothermal Energy Consumption": 209.26,
+  "Solar Energy Consumption": 1042.856,
+  "Wind Energy Consumption": 2731.847,
+  "Wood Energy Consumption": 2297.166,
+  "Waste Energy Consumption": 433.133,
+  "Biofuels Consumption": 2254.403,
+  "Total Biomass Energy Consumption": 4984.702,
+  "Total Renewable Energy Consumption": 11460.497
+}]

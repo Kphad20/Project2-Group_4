@@ -1,12 +1,36 @@
-var StateEnergySourceURL = "data/state.json";
-//var StateEnergySourceURL = "api/State_EnergyData_2018";
+//console.log("In state data")
+//console.log(window.location.search) 
+const params = new URLSearchParams(window.location.search)
+const satename = params.get('name');
+console.log(satename);
+
+var url_ranking = `http://localhost:5000/state/ranking?name=${satename}`
+d3.json(url_ranking)
+    .then(data => {
+        // console.log("Hello")
+        console.log(data);
+    });
+// d3.json("localhost:5000/state/ranking?name=nj").then(data=>{
+//     console.log(data)
+// })
+
+const url_productionsource = `http://localhost:5000/state/production?name=${satename}`
+d3.json(url_productionsource)
+    .then(data => {
+        console.log(data);
+    });
+
+
+
+var StateEnergySourceURL = `http://localhost:5000/state/production?name=${satename}`;
+var StateProdConsURL = `http://localhost:5000/state/ranking?name=${satename}`;
 
 
 // create a function for the state info table
 function stateSummary() {
     console.log("hello1");
     // read the data
-    d3.json(StateEnergySourceURL).then(function(StatePCdata) {
+    d3.json(StateProdConsURL).then(function(StatePCdata) {
         // d3.json(StateEnergySourceURL, StatePCdata => {
         console.log(StatePCdata)
             // var allStates = StatePCdata['State Name'];

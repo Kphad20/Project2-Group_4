@@ -4,22 +4,24 @@ var StateEnergySourceURL = "data/state.json";
 
 // create a function for the state info table
 function stateSummary() {
+    console.log("hello1");
     // read the data
-    d3.json(StateEnergySourceURL, StatePCdata => {
-        console.log(data);
-        var allStates = StatePCdata['State Name'];
-        var selState = allStates.filter(selectedState => selectedState == StatePCdata['State Name']);
-        // var StateIndex = allStates.indexOf(selState[0])
-        var CO2Emissions = StatePCdata['Carbon Dioxide Emission']
-        var CO2EmissionsRank = StatePCdata['Carbon Dioxide Emission Rank']
-        var consumptionPerCapita = StatePCdata['Consumption per capita']
-        var consumptionRank = StatePCdata['Consumption Rank']
-        var expendituresperCapita = StatePCdata['Expenditure per capita']
-        var expendituresRank = StatePCdata['Expenditure Rank']
-        var productionShare = StatePCdata['Production Share']
-        var productionRank = StatePCdata["Production Rank"]
+    d3.json(StateEnergySourceURL).then(function(StatePCdata) {
+        // d3.json(StateEnergySourceURL, StatePCdata => {
+        console.log(StatePCdata)
+            // var allStates = StatePCdata['State Name'];
+            // var selState = allStates.filter(selectedState => selectedState == StatePCdata['State Name']);
+            // // var StateIndex = allStates.indexOf(selState[0])
+            // var CO2Emissions = StatePCdata['Carbon Dioxide Emission']
+            // var CO2EmissionsRank = StatePCdata['Carbon Dioxide Emission Rank']
+            // var consumptionPerCapita = StatePCdata['Consumption per capita']
+            // var consumptionRank = StatePCdata['Consumption Rank']
+            // var expendituresperCapita = StatePCdata['Expenditure per capita']
+            // var expendituresRank = StatePCdata['Expenditure Rank']
+            // var productionShare = StatePCdata['Production Share']
+            // var productionRank = StatePCdata["Production Rank"]
 
-        
+
 
         // select the demographic table
         var getSummary = d3.select("#state-table");
@@ -36,17 +38,17 @@ function stateSummary() {
 }
 
 function buildCharts() {
+    console.log("hello2");
+    d3.json(StateEnergySourceURL).then(function(stateEData) {
 
-    d3.json(StateEnergySourceURL, stateEData => {
-        
 
         var pielabels = Object.entries(stateEData).map(key =>
-                key)
-         
+            key)
+
         ;
         var values = Object.entries(stateEData).map((key, value) => value)
 
-        var ctx = document.getElementById('plot1')
+        var ctx = document.getElementById('pieChart')
         var myPieChart = new Chart(ctx, {
             type: 'doughnut',
             data: {
@@ -88,7 +90,7 @@ function buildCharts() {
 
 
 function init() {
-    
+    console.log("hello3");
     buildCharts();
     stateSummary();
 

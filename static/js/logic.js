@@ -58,6 +58,8 @@ var geojson;
 
 d3.json(path, function(err, data) {
   if(err) console.log("error fetching data");
+
+  console.log(data);
   d3.json("http://localhost:5000", function(energyData) {
 
     function statedata(statename){
@@ -71,7 +73,7 @@ d3.json(path, function(err, data) {
       geojson = L.choropleth(data, {
         
         // Define what property in the features to use
-        valueProperty: "CENSUSAREA",
+        valueProperty: "ConsumptionShare",
 
         // Set color scale
         scale: ["#ffffb2", "#b10026"],
@@ -101,8 +103,8 @@ d3.json(path, function(err, data) {
               });
             },
             click:function(event){
-              console.log(event.target.feature.properties.NAME)
-              statedata(event.target.feature.properties.NAME)
+              console.log(event.target.feature.properties.StateAbbreviation)
+              statedata(event.target.feature.properties.StateAbbreviation)
             }
           });
 

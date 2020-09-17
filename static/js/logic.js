@@ -47,7 +47,7 @@ d3.json(path, function(err, data) {
 
     function statedata(statename) {
         //console.log("Inside - On click method")
-        var currenturl = window.location.href.split('/')[2];;
+        var currenturl = window.location.href.split('/')[0];
         console.log(currenturl)
         var newurl = currenturl + `state.html?name=${statename}`
         window.location.href = newurl;

@@ -4,27 +4,6 @@ const params = new URLSearchParams(window.location.search)
 const satename = params.get('name');
 console.log(satename);
 
-function createData1() {
-    var url_ranking = `http://localhost:5000/state/ranking?name=${satename}`
-    d3.json(url_ranking)
-        .then(data => {
-            // console.log("Hello")
-            console.log(data);
-        });
-    // d3.json("localhost:5000/state/ranking?name=nj").then(data=>{
-    //     console.log(data)
-    // })
-}
-
-function createData() {
-    const url_productionsource = `http://localhost:5000/state/production?name=${satename}`
-    d3.json(url_productionsource)
-        .then(data => {
-            console.log(data);
-        });
-}
-
-
 var StateEnergySourceURL = `http://localhost:5000/state/production?name=${satename}`;
 var StateProdConsURL = `http://localhost:5000/state/ranking?name=${satename}`;
 
@@ -37,6 +16,8 @@ function stateSummary() {
 
         console.log(StatePCdata2)
         var StatePCdata = StatePCdata2[0];
+
+
 
         var CO2Emissions = StatePCdata['Carbon Dioxide Emission']
         var CO2EmissionsRank = StatePCdata['Carbon Dioxide Emission Rank']
@@ -65,6 +46,12 @@ function stateSummary() {
         // clear the demographic table
         getSummary.html("");
 
+        var statename=d3.select("#statename")
+        console.log(statename)
+        statename.append("h5").text(`State : ${StatePCdata["State Name"]}`)
+        .append("p")
+
+        //statename.attribute()
         // loop through the info in the metadata and append results to table
         Object.entries(StatePCdata).slice(0, -2).forEach((key) => {
             console.log(key)

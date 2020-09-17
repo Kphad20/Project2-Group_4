@@ -48,14 +48,14 @@ function stateSummary() {
 
         var statename = d3.select("#statename")
         console.log(statename)
-        statename.append("h5").text(`State : ${StatePCdata["State Name"]}`)
+        statename.append("h3").text(`${StatePCdata["State Name"]}`)
             .append("p")
 
         //statename.attribute()
         // loop through the info in the StatePCdata and append results to table
         Object.entries(StatePCdata).slice(0, -2).forEach((key) => {
             console.log(key)
-            getSummary.append("h6").text(key[0] + ": " + key[1] + "\n");
+            getSummary.append("h5").text(key[0] + ": " + key[1] + "\n");
         });
     }).
     catch(function errorHandler(err) {
@@ -110,8 +110,6 @@ function buildCharts() {
                         'rgb(239, 86, 35)',
                         'rgb(188, 35, 239)',
                         '#74c476',
-
-
                     ]
                 }],
                 labels: ["Fossil Fuel - Coal",
@@ -126,8 +124,8 @@ function buildCharts() {
             options: {
                 title: {
                     display: true,
-                    text: "State Energy production by Source [mill BTU]",
-                    fontSize: 18
+                    text: "State Energy production by Source (million BTU)",
+                    fontSize: 20
                 },
                 legend: {
                     position: 'right',

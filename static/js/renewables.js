@@ -22,8 +22,6 @@ var url="http://localhost:5000/renewables"
 
 //d3.json("http://localhost:5000/renewables").then(jsondata=> {
 d3.json(url,function(jsondata) {
-//d3.json(url,function(jsondata) {
-
     
     var parseDate = d3.time.format("%Y").parse;
     console.log(parseDate)

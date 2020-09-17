@@ -15,6 +15,7 @@ body {
 #heading {
   background-color: rgb(253, 253, 253);
   background-image: url("../images/lines.jpg");
+  color: white;
 }
 
 /* CSS from the Leaflet-Choropleth documentation */
@@ -49,5 +50,41 @@ body {
 
 .legend .max {
   float: right;
+}
+
+.leaflet-control-layers-base {
+  text-align: left;
+}
+
+#statename h3 {
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+#state-table {
+  padding-left: 100px;
+  color: white;
+}
+
+#plot1 {
+  color: white;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #fff;
+    shape-rendering: crispEdges;
+}
+
+.x.axis path {
+    display: none;
+}
+
+.line {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1.5px
 }
 

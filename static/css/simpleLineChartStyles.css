@@ -1,10 +1,7 @@
-    h1 {
-    font: 30px helvetica;
-}
-
 body {
-    font: 10px helvetica;
-}
+    padding: 20px;
+    margin: 0;
+  }
 
 .axis path,
 .axis line {
@@ -20,4 +17,5 @@ body {
 .line {
     fill: none;
     stroke: #fff;
-    stroke-width: 1.5px;
+    stroke-width: 1.5px
+}

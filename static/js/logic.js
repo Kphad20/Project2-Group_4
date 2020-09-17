@@ -215,8 +215,6 @@ d3.json(path, function(err, data) {
         return div;
     };
 
-    //legendP.addTo(layers.PRODUCTION);
-
     // Set up the legend for energy consumption
     var legendP = L.control({ position: "bottomleft" });
     legendP.onAdd = function() {
@@ -241,8 +239,6 @@ d3.json(path, function(err, data) {
         div.innerHTML += "<ul>" + labels.join("") + "</ul>";
         return div;
     };
-
-    //legendC.addTo(layers.CONSUMPTION);
 
     // Set up the legend for total energy production
     var legendE = L.control({ position: "bottomleft" });
@@ -290,7 +286,4 @@ d3.json(path, function(err, data) {
             legendE.addTo(this);
        }
     });
-
-    //legendE.addTo(layers.EMISSIONS);
-
 });

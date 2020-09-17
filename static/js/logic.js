@@ -20,47 +20,29 @@ var layers = {
 // Define a map object
 var myMap = L.map("map", {
   center: [40, -95],
-  zoom: 2
-  // layers: [
-  //   layers.CONSUMPTION,
-  //   layers.PRODUCTION,
-  //   layers.EMISSIONS]
+  zoom: 2,
+  layers: [
+    layers.PRODUCTION]
 });
 
 lightmap.addTo(myMap);
 
 // Create an overlays object to add to layer control
 var overlays = {
-  "Production": layers.PRODUCTION,
-  "Consumption": layers.CONSUMPTION,
-  "Emissions": layers.EMISSIONS
+    "Production": layers.PRODUCTION,
+    "Consumption": layers.CONSUMPTION,
+    "Emissions": layers.EMISSIONS
 };
 
 // Pass our map layers into our layer control
 // Add the layer control to the map
-L.control.layers(overlays).addTo(myMap);
-
-var info = L.control({
-  position: "bottomright"
-});
-
-// // When the layer control is added, insert a div with the class of "legend"
-info.onAdd = function() {
-  var div = L.DomUtil.create("div", "legend");
-  return div;
-};
-// // Add the info legend to the map
-info.addTo(myMap);
+L.control.layers(overlays, null, {collapsed:false}).addTo(myMap);
 
 var path = "data/states.geojson";
 
-var geojson;
-
 d3.json(path, function(err, data) {
   if(err) console.log("error fetching data");
-
   console.log(data);
-  d3.json("http://localhost:5000", function(energyData) {
 
     function statedata(statename){
       //console.log("Inside - On click method")
@@ -69,15 +51,16 @@ d3.json(path, function(err, data) {
       var newurl=currenturl+`state.html?name=${statename}`
       window.location.href = newurl;
     }
-  
-      geojson = L.choropleth(data, {
-        
+
+      // State Energy Production layer
+      var geojsonP = L.choropleth(data, {
+
         // Define what property in the features to use
-        valueProperty: "ConsumptionShare",
+        valueProperty: "ProductionShare",
 
         // Set color scale
-        scale: ["#ffffb2", "#b10026"],
-        steps: 5,
+        scale: ["#c7e9b4", "#0c2c84"],
+        steps: 8,
         mode: "q",
         style: {
           // Border color
@@ -109,8 +92,193 @@ d3.json(path, function(err, data) {
           });
 
           // Binding a pop-up to each layer
-          layer.bindTooltip(feature.properties.NAME);
-          },
-      }).addTo(myMap);
-  });
+          layer.bindTooltip(feature.properties.NAME + "<br>" + feature.properties.ProductionShare + " trillion BTU" + "<br>" + 
+            "Rank: " + feature.properties.ProductionRank);
+          }
+
+      }).addTo(layers.PRODUCTION);
+    
+      var geojsonC = L.choropleth(data, {
+
+        // Define what property in the features to use
+        valueProperty: "ConsumptionShare",
+
+        // Set color scale
+        scale: ["#dadaeb", "#4a1486"],
+        steps: 8,
+        mode: "q",
+        style: {
+          // Border color
+          color: "#fff",
+          weight: 1,
+          fillOpacity: 0.8
+        },
+
+        onEachFeature: function(feature, layer) {
+
+          // Set mouse events to change map styling on mouseover and mouseout
+          layer.on({
+            mouseover: function(event) {
+              layer = event.target;
+              layer.setStyle({
+                fillOpacity: 1
+              });
+            },
+            mouseout: function(event) {
+              layer = event.target;
+              layer.setStyle({
+                fillOpacity: 0.8
+              });
+            },
+            click:function(event){
+              console.log(event.target.feature.properties.StateAbbreviation)
+              statedata(event.target.feature.properties.StateAbbreviation)
+            }
+          });
+
+          // Binding a pop-up to each layer
+          layer.bindTooltip(feature.properties.NAME + "<br>" + feature.properties.ConsumptionShare + " million BTU" + "<br>" + 
+            "Rank: " + feature.properties.ConsumptionRank);
+          }
+
+      }).addTo(layers.CONSUMPTION);
+
+      // State Energy Emissions layer
+      var geojsonE = L.choropleth(data, {
+
+        // Define what property in the features to use
+        valueProperty: "CarbonDioxideShare",
+
+        // Set color scale
+        scale: ["#ffffb2", "#b10026"],
+        steps: 8,
+        mode: "q",
+        style: {
+          // Border color
+          color: "#fff",
+          weight: 1,
+          fillOpacity: 0.8
+        },
+
+        onEachFeature: function(feature, layer) {
+
+          // Set mouse events to change map styling on mouseover and mouseout
+          layer.on({
+            mouseover: function(event) {
+              layer = event.target;
+              layer.setStyle({
+                fillOpacity: 1
+              });
+            },
+            mouseout: function(event) {
+              layer = event.target;
+              layer.setStyle({
+                fillOpacity: 0.8
+              });
+            },
+            click:function(event){
+              console.log(event.target.feature.properties.StateAbbreviation)
+              statedata(event.target.feature.properties.StateAbbreviation)
+            }
+          });
+
+          // Binding a pop-up to each layer
+          layer.bindTooltip(feature.properties.NAME + "<br>" + feature.properties.CarbonDioxideShare + " million metric tons" + "<br>" + 
+            "Rank: " + feature.properties.CarbonDioxideRank);
+          }
+
+      }).addTo(layers.EMISSIONS);
+
+        // Set up the legend for total energy production
+        var legendP = L.control({ position: "bottomleft"});
+        legendP.onAdd = function() {
+          var div = L.DomUtil.create("div", "info legend");
+          var limits = geojsonP.options.limits;
+          var colors = geojsonP.options.colors;
+          var labels = [];
+
+          // Add min & max
+          var legendInfo = "<p>Consumption per Capita (million BTU)</p>" +
+            "<div class=\"labels\">" +
+            "<div class=\"min\">" + limits[0] + "</div>" +
+            "<div class=\"max\">" + limits[limits.length - 1] + "</div>" +
+            "</div>";
+
+          div.innerHTML = legendInfo;
+
+          limits.forEach(function(limit, index) {
+            labels.push("<li style=\"background-color: " + colors[index] + "\"></li>");
+          });
+
+          div.innerHTML += "<ul>" + labels.join("") + "</ul>";
+          return div;
+        };
+
+        legendP.addTo(layers.PRODUCTION);
+
+        // Set up the legend for energy consumption
+        var legendC = L.control({ position: "bottomleft"});
+        legendC.onAdd = function() {
+          var div = L.DomUtil.create("div", "info legend");
+          var limits = geojsonC.options.limits;
+          var colors = geojsonC.options.colors;
+          var labels = [];
+
+          // Add min & max
+          var legendInfo = "<p>Total Energy Production (trillion BTU)</p>" +
+            "<div class=\"labels\">" +
+            "<div class=\"min\">" + limits[0] + "</div>" +
+            "<div class=\"max\">" + limits[limits.length - 1] + "</div>" +
+            "</div>";
+
+          div.innerHTML = legendInfo;
+
+          limits.forEach(function(limit, index) {
+            labels.push("<li style=\"background-color: " + colors[index] + "\"></li>");
+          });
+
+          div.innerHTML += "<ul>" + labels.join("") + "</ul>";
+          return div;
+        };
+
+        legendC.addTo(layers.CONSUMPTION);
+
+        // Set up the legend for total energy production
+        var legendE = L.control({ position: "bottomleft"});
+        legendE.onAdd = function() {
+          var div = L.DomUtil.create("div", "info legend");
+          var limits = geojsonE.options.limits;
+          var colors = geojsonE.options.colors;
+          var labels = [];
+
+          // Add min & max
+          var legendInfo = "<p>CO2 Emissions (million metric tons)</p>" +
+            "<div class=\"labels\">" +
+            "<div class=\"min\">" + limits[0] + "</div>" +
+            "<div class=\"max\">" + limits[limits.length - 1] + "</div>" +
+            "</div>";
+
+          div.innerHTML = legendInfo;
+
+          limits.forEach(function(limit, index) {
+            labels.push("<li style=\"background-color: " + colors[index] + "\"></li>");
+          });
+
+          div.innerHTML += "<ul>" + labels.join("") + "</ul>";
+          return div;
+        };
+
+        // map.on('baselayerchange', function (eventLayer) {
+        //   // Switch to the Permafrost legend...
+        //      if (eventLayer.name === 'PRODUCTION') {
+        //          this.removeControl(legend);
+        //          legendP.addTo(this);}
+        //     else { // Or switch to the treeline legend...
+        //          this.removeControl(legendP);
+        //          legend.addTo(this);
+        //     }});
+
+        legendE.addTo(layers.EMISSIONS);
+
 });
+

@@ -57,6 +57,9 @@ function stateSummary() {
             console.log(key)
             getSummary.append("h6").text(key[0] + ": " + key[1] + "\n");
         });
+    }).
+    catch(function errorHandler(err) {
+      err.message; // 'Oops!'
     });
 }
 //Function to create doughnut chart with new library chart.js
@@ -136,6 +139,9 @@ function buildCharts() {
             }
         });
         return myPieChart
+    }).
+    catch(function errorHandler(err) {
+      err.message; // 'Oops!'
     });
 };
 

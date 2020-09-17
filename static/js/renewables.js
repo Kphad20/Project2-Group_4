@@ -12,13 +12,21 @@ let data = null,
     color = null,
     svg = null,
     line = null,
-    timeseries2plot = null,
+    timeseries2plot = null, 
     t2plot = null,
     legend = null,
     mouseG = null;
-d3.json("d3-line/annual_renewable.json", function(error, jsondata) {
 
+var url="http://localhost:5000/renewables"
+//var url="d3-line/annual_renewable.json"
+
+//d3.json("http://localhost:5000/renewables").then(jsondata=> {
+d3.json(url,function(jsondata) {
+//d3.json(url,function(jsondata) {
+
+    
     var parseDate = d3.time.format("%Y").parse;
+    console.log(parseDate)
     jsondata.forEach(function(d) {
         d.date = parseDate(d.Year + "");
 
@@ -213,11 +221,11 @@ d3.json("d3-line/annual_renewable.json", function(error, jsondata) {
         t2plot.append("text")
             .datum(function(d) {
                 return {
-                    name: d.name,
+                    //name: d.name,
                     value: d.values[d.values.length - 1]
                 };
             })
-            .attr("transform", function(d) {
+        .attr("transform", function(d) {
                 return "translate(" + x(d.value.date) + "," + y(d.value.price) + ")";
             })
             .attr("x", 3)
@@ -324,4 +332,8 @@ d3.json("d3-line/annual_renewable.json", function(error, jsondata) {
                     d3 - https://www.analyticsvidhya.com/blog/2017/08/visualizations-with-d3-js/
 
     */
-});
+})
+// .
+// catch(function(error) {
+//   console.log(error); // 'Oops!'
+// });

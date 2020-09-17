@@ -1,0 +1,23 @@
+    h1 {
+    font: 30px helvetica;
+}
+
+body {
+    font: 10px helvetica;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #fff;
+    shape-rendering: crispEdges;
+}
+
+.x.axis path {
+    display: none;
+}
+
+.line {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1.5px;

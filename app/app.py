@@ -19,12 +19,12 @@ cors=CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 #Setup routes   
-@app.route("/")
-@cross_origin()
-def home():
-    energy_info = [doc for doc in db.State_EnergyData_2018.find({}, {'_id': False})]
-    # print(cs_info)
-    return jsonify(energy_info)
+# @app.route("/")
+# @cross_origin()
+# def home():
+#     energy_info = [doc for doc in db.State_EnergyData_2018.find({}, {'_id': False})]
+#     # print(cs_info)
+#     return jsonify(energy_info)
 
 @app.route("/state/ranking")
 @cross_origin()
@@ -61,6 +61,14 @@ def productionsourcestatedata():
             return jsonify({"error":f"No record found for {args['name']}"}),404
     else:
         return jsonify({"Error":"No query string"}),404
+
+@app.route("/renewables")
+@cross_origin()
+def renewable():
+    energy_info = [doc for doc in db.US_Annual_Renewable.find({}, {'_id': False})]
+    print(energy_info)
+    # print(cs_info)
+    return jsonify(energy_info)
 
 if __name__=="__main__":
     app.run(debug=True)

@@ -26,6 +26,8 @@ d3.json("annual_renewable.json",function(error,jsondata) {
     d.date = parseDate(d.Year+"");
     
     });
+    console.log(jsondata)
+
     var data = [];
     var names = [ "Wood Energy Production",
                 "Biofuels Production",

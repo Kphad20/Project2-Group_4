@@ -3,7 +3,7 @@
 var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
     attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
     tileSize: 512,
-    maxZoom: 4,
+    maxZoom: 10,
     minZoom: 4,
     zoomOffset: -1,
     id: "mapbox/light-v10",
@@ -20,7 +20,7 @@ var layers = {
 // Define a map object
 var myMap = L.map("map", {
     center: [40, -95],
-    zoom: 2,
+    zoom: 4,
     layers: [
         layers.PRODUCTION
     ]
@@ -191,11 +191,11 @@ d3.json(path, function(err, data) {
     }).addTo(layers.EMISSIONS);
 
     // Set up the legend for total energy production
-    var legendP = L.control({ position: "bottomleft" });
-    legendP.onAdd = function() {
+    var legendC = L.control({ position: "bottomleft" });
+    legendC.onAdd = function() {
         var div = L.DomUtil.create("div", "info legend");
-        var limits = geojsonP.options.limits;
-        var colors = geojsonP.options.colors;
+        var limits = geojsonC.options.limits;
+        var colors = geojsonC.options.colors;
         var labels = [];
 
         // Add min & max
@@ -215,14 +215,14 @@ d3.json(path, function(err, data) {
         return div;
     };
 
-    legendP.addTo(layers.PRODUCTION);
+    //legendP.addTo(layers.PRODUCTION);
 
     // Set up the legend for energy consumption
-    var legendC = L.control({ position: "bottomleft" });
-    legendC.onAdd = function() {
+    var legendP = L.control({ position: "bottomleft" });
+    legendP.onAdd = function() {
         var div = L.DomUtil.create("div", "info legend");
-        var limits = geojsonC.options.limits;
-        var colors = geojsonC.options.colors;
+        var limits = geojsonP.options.limits;
+        var colors = geojsonP.options.colors;
         var labels = [];
 
         // Add min & max
@@ -242,7 +242,7 @@ d3.json(path, function(err, data) {
         return div;
     };
 
-    legendC.addTo(layers.CONSUMPTION);
+    //legendC.addTo(layers.CONSUMPTION);
 
     // Set up the legend for total energy production
     var legendE = L.control({ position: "bottomleft" });
@@ -269,16 +269,28 @@ d3.json(path, function(err, data) {
         return div;
     };
 
-    // map.on('baselayerchange', function (eventLayer) {
-    //   // Switch to the Permafrost legend...
-    //      if (eventLayer.name === 'PRODUCTION') {
-    //          this.removeControl(legend);
-    //          legendP.addTo(this);}
-    //     else { // Or switch to the treeline legend...
-    //          this.removeControl(legendP);
-    //          legend.addTo(this);
-    //     }});
+    legendP.addTo(myMap);
 
-    legendE.addTo(layers.EMISSIONS);
+    myMap.on('baselayerchange', function (eventLayer) {
+      // Switch to the PRODUCTION legend...
+        console.log(eventLayer.name)
+         if (eventLayer.name === 'Production') {
+             this.removeControl(legendC);
+             this.removeControl(legendE);
+             legendP.addTo(this);
+        }
+        else if (eventLayer.name === 'Consumption') { // Or switch to the CONSUMPTION legend...
+             this.removeControl(legendP);
+             this.removeControl(legendE);
+             legendC.addTo(this);
+        }
+        else { // Or switch to the EMISSION legend...
+            this.removeControl(legendP);
+            this.removeControl(legendC);
+            legendE.addTo(this);
+       }
+    });
+
+    //legendE.addTo(layers.EMISSIONS);
 
 });

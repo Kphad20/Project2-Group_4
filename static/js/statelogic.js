@@ -103,14 +103,14 @@ function stateSummary() {
 
         var statename = d3.select("#statename")
         console.log(statename)
-        statename.append("h3").text(`${StatePCdata["State Name"]}`)
+        statename.append("h2").text(`${StatePCdata["State Name"]}`)
             .append("p")
 
         //statename.attribute()
         // loop through the info in the StatePCdata and append results to table
         Object.entries(StatePCdata).slice(0, -2).forEach((key) => {
             console.log(key)
-            getSummary.append("h5").text(key[0] + ": " + key[1] + "\n");
+            getSummary.append("tr").text(key[0] + ": " + key[1] + "\n");
         });
     }).
     catch(function errorHandler(err) {
@@ -127,7 +127,6 @@ function buildCharts() {
         // var pielabels = Object.entries(stateEData).map(key =>
         //     key)
 
-        ;
         var coal = stateEData["Fossil Fuel - Coal"]; //["Fossil Fuel - Coal"]
         console.log(stateEData);
         var naturalGas = stateEData["Fossil Fuel - Natural Gas"]; //["Fossil Fuel - Natural Gas"]
@@ -136,7 +135,6 @@ function buildCharts() {
         var bioFuels = stateEData['BioFuels']; //['BioFuels']
         var woodWaste = stateEData['Wood and Waste']; //['Wood and Waste']
         var other = stateEData['Other']; //['Other']
-
 
         var pieDataArr = [
 
@@ -180,13 +178,16 @@ function buildCharts() {
                 title: {
                     display: true,
                     text: "State Energy production by Source (million BTU)",
-                    fontSize: 20
+                    fontSize: 20, 
+                    fontColor: "white"
                 },
                 legend: {
                     position: 'right',
                     alignment: 'center',
+                    
                     labels: {
-                        boxWidth: 10
+                        boxWidth: 10,
+                        fontColor: "white"
                     }
                 }
             }

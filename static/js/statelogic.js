@@ -7,6 +7,61 @@ console.log(satename);
 var StateEnergySourceURL = `http://localhost:5000/state/production?name=${satename}`;
 var StateProdConsURL = `http://localhost:5000/state/ranking?name=${satename}`;
 
+// create the initial function for the initial data selection
+function buildDropdown() {
+    // selecting dropdown menu
+    var newID = d3.select("#selDataset");
+
+    // Fetch the JSON data and console log it
+    d3.json("data/state_abbreviations.json").then(function(data) {
+        console.log('this is data', data);
+        var states = data;
+        // inserting a dropdown option for each name id
+        Object.values(states).forEach((sample) => {
+            newID.append("option").text(sample).property("value", sample);
+        });
+        var initId = states[0];
+
+
+    })
+
+    //function to change url based on state selected
+    function stateChange(state) {
+
+        var currenturl = window.location.href.split('/')[0];
+        console.log(currenturl)
+        var newurl = currenturl + `state.html?name=${state}`
+        window.location.href = newurl;
+
+    }
+    // // function to change url based on state selected
+    // function stateChange(state) {
+    //     // target url
+    //     var baseUrl = window.location.href?name=${state}`;
+
+    //     // change url and navigate
+    //     window.location.assign(baseUrl);
+    //   }
+
+    //   // create the initial function for the initial data selection
+    //   function buildDropdown() {
+    //       // selecting dropdown menu
+    //       var newID = d3.select("#selDataset");
+
+    //       // Fetch the JSON data and console log it
+    //       d3.json("data/state_abbreviations.json").then(function(data) {
+    //           console.log(data);
+    //           var states = data.names;
+    //           // inserting a dropdown option for each name id
+    //           states.forEach((sample) => {
+    //               newID.append("option").text(sample).property("value", sample);
+    //           });
+    //           var initId = states[0];
+
+    //           
+
+}
+
 
 // create a function for the state info table
 function stateSummary() {
@@ -59,7 +114,7 @@ function stateSummary() {
         });
     }).
     catch(function errorHandler(err) {
-      err.message; // 'Oops!'
+        err.message; // 'Oops!'
     });
 }
 //Function to create doughnut chart with new library chart.js
@@ -139,18 +194,18 @@ function buildCharts() {
         return myPieChart
     }).
     catch(function errorHandler(err) {
-      err.message; // 'Oops!'
+        err.message; // 'Oops!'
     });
 };
 
 
 //initializing all the functions
 function init() {
-    console.log("hello3");
+    buildDropdown();
     buildCharts();
     stateSummary();
-    createData();
-    createData1();
+    // createData();
+    stateChange();
 };
 
 

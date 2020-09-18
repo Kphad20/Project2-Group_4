@@ -47,7 +47,7 @@
                     <!-- create a div for the dropdown menu -->
                     <div class="well" id="statename">
                         <!-- <h5>State: </h5> -->
-                        <!-- <select id="selDataset" onchange="stateChange(this.value)"></select> -->
+                        <select id="selDataset" onchange="stateChange(this.value)"></select>
                     </div>
                 </div>
             </div>
@@ -60,6 +60,12 @@
                     </div>
                 </div>
                 <div class="col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">State Summary</h3>
+                        </div>
+                        <div id="state-table" class="panel-body"></div>
+                    </div>
                     <div id="state-table">
                         <canvas id="state-summary" width="400" height="400"></canvas>
                     </div>
@@ -81,6 +87,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
         <script src="https://d3js.org/d3.v5.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
         <!-- Leaflet-Choropleth JavaScript -->
         <script type="text/javascript" src="static/js/choropleth.js"></script>

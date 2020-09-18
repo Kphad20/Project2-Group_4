@@ -15,25 +15,46 @@ function buildDropdown() {
     // Fetch the JSON data and console log it
     d3.json("data/state_abbreviations.json").then(function(data) {
         console.log('this is data', data);
-        var states = data;
-        // inserting a dropdown option for each name id
-        Object.values(states).forEach((sample) => {
-            newID.append("option").text(sample).property("value", sample);
+
+        Object.entries(data).forEach(function([keys,values]) {
+            newID.append("option").text(values).property("value", keys);
+            //console.log([keys,statename])
+            if (keys===satename){
+                console.log(document.getElementById("selDataset").options)
+            }
         });
-        var initId = states[0];
 
+    for (var option of document.getElementById("selDataset").options) {
+            if (option.value === satename) {
+            option.selected = true;
+            
+            }
+        }  
 
-    })
+    });
+       
+    //var initId = states[0];
+    //console.log(satename)
+    //document.getElementById("selDataset").forEach(function(val)).value='nj';
+    // =satename
 
-    //function to change url based on state selected
-    function stateChange(state) {
+}
 
-        var currenturl = window.location.href.split('/')[0];
-        console.log(currenturl)
-        var newurl = currenturl + `state.html?name=${state}`
-        window.location.href = newurl;
+d3.selectAll("#selDataset").on("change", stateChange);
 
-    }
+//function to change url based on state selected
+function stateChange() {
+
+    var dropdownMenu = d3.select("#selDataset");
+    // Assign the value of the dropdown menu option to a variable
+    var state = dropdownMenu.property("value");
+    console.log(state)
+    var currenturl = window.location.href.split('/')[0];
+    console.log(currenturl)
+    var newurl = currenturl + `state.html?name=${state}`
+    window.location.href = newurl;
+
+}
     // // function to change url based on state selected
     // function stateChange(state) {
     //     // target url
@@ -60,7 +81,7 @@ function buildDropdown() {
 
     //           
 
-}
+
 
 
 // create a function for the state info table
@@ -206,7 +227,7 @@ function init() {
     buildCharts();
     stateSummary();
     // createData();
-    stateChange();
+    
 };
 
 

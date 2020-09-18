@@ -7,6 +7,61 @@ console.log(satename);
 var StateEnergySourceURL = `http://localhost:5000/state/production?name=${satename}`;
 var StateProdConsURL = `http://localhost:5000/state/ranking?name=${satename}`;
 
+// create the initial function for the initial data selection
+function buildDropdown() {
+    // selecting dropdown menu
+    var newID = d3.select("#selDataset");
+
+    // Fetch the JSON data and console log it
+    d3.json("data/state_abbreviations.json").then(function(data) {
+        console.log('this is data', data);
+        var states = data;
+        // inserting a dropdown option for each name id
+        Object.values(states).forEach((sample) => {
+            newID.append("option").text(sample).property("value", sample);
+        });
+        var initId = states[0];
+
+
+    })
+
+    //function to change url based on state selected
+    function stateChange(state) {
+
+        var currenturl = window.location.href.split('/')[0];
+        console.log(currenturl)
+        var newurl = currenturl + `state.html?name=${state}`
+        window.location.href = newurl;
+
+    }
+    // // function to change url based on state selected
+    // function stateChange(state) {
+    //     // target url
+    //     var baseUrl = window.location.href?name=${state}`;
+
+    //     // change url and navigate
+    //     window.location.assign(baseUrl);
+    //   }
+
+    //   // create the initial function for the initial data selection
+    //   function buildDropdown() {
+    //       // selecting dropdown menu
+    //       var newID = d3.select("#selDataset");
+
+    //       // Fetch the JSON data and console log it
+    //       d3.json("data/state_abbreviations.json").then(function(data) {
+    //           console.log(data);
+    //           var states = data.names;
+    //           // inserting a dropdown option for each name id
+    //           states.forEach((sample) => {
+    //               newID.append("option").text(sample).property("value", sample);
+    //           });
+    //           var initId = states[0];
+
+    //           
+
+}
+
 
 // create a function for the state info table
 function stateSummary() {
@@ -48,18 +103,18 @@ function stateSummary() {
 
         var statename = d3.select("#statename")
         console.log(statename)
-        statename.append("h3").text(`${StatePCdata["State Name"]}`)
+        statename.append("h2").text(`${StatePCdata["State Name"]}`)
             .append("p")
 
         //statename.attribute()
         // loop through the info in the StatePCdata and append results to table
         Object.entries(StatePCdata).slice(0, -2).forEach((key) => {
             console.log(key)
-            getSummary.append("h5").text(key[0] + ": " + key[1] + "\n");
+            getSummary.append("tr").text(key[0] + ": " + key[1] + "\n");
         });
     }).
     catch(function errorHandler(err) {
-      err.message; // 'Oops!'
+        err.message; // 'Oops!'
     });
 }
 //Function to create doughnut chart with new library chart.js
@@ -72,7 +127,6 @@ function buildCharts() {
         // var pielabels = Object.entries(stateEData).map(key =>
         //     key)
 
-        ;
         var coal = stateEData["Fossil Fuel - Coal"]; //["Fossil Fuel - Coal"]
         console.log(stateEData);
         var naturalGas = stateEData["Fossil Fuel - Natural Gas"]; //["Fossil Fuel - Natural Gas"]
@@ -81,7 +135,6 @@ function buildCharts() {
         var bioFuels = stateEData['BioFuels']; //['BioFuels']
         var woodWaste = stateEData['Wood and Waste']; //['Wood and Waste']
         var other = stateEData['Other']; //['Other']
-
 
         var pieDataArr = [
 
@@ -125,13 +178,16 @@ function buildCharts() {
                 title: {
                     display: true,
                     text: "State Energy production by Source (million BTU)",
-                    fontSize: 20
+                    fontSize: 20, 
+                    fontColor: "white"
                 },
                 legend: {
                     position: 'right',
                     alignment: 'center',
+                    
                     labels: {
-                        boxWidth: 10
+                        boxWidth: 10,
+                        fontColor: "white"
                     }
                 }
             }
@@ -139,18 +195,18 @@ function buildCharts() {
         return myPieChart
     }).
     catch(function errorHandler(err) {
-      err.message; // 'Oops!'
+        err.message; // 'Oops!'
     });
 };
 
 
 //initializing all the functions
 function init() {
-    console.log("hello3");
+    buildDropdown();
     buildCharts();
     stateSummary();
-    createData();
-    createData1();
+    // createData();
+    stateChange();
 };
 
 

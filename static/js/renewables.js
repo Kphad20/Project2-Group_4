@@ -25,12 +25,12 @@ function setupCanvasSize() {
 // Setup canvas margins and size
 margin = {
 top:50,
-right: 250,
+right: 220,
 bottom: 100,
-left: 500
+left: 300
 },
 width = 1500 - margin.left - margin.right,
-height = 800 - margin.top - margin.bottom;
+height = 600 - margin.top - margin.bottom;
 }
 
 setupCanvasSize()
@@ -105,6 +105,7 @@ function interpolateLines(data,xScale,yScale) {
 
 function appendSvg(domElement,plotnames,color) {
     // Add SVG element to body section
+    d3.selectAll("svg").remove();
     svg = d3.select(domElement).append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -119,6 +120,7 @@ function appendSvg(domElement,plotnames,color) {
 
 function colorTransform (plotnames,color) {
 
+    console.log(plotnames)
     color.domain(d3.keys(plotnames[0]).filter(function(key) {
         return key !== "date";
         })
@@ -127,6 +129,7 @@ function colorTransform (plotnames,color) {
 
 function mapLines(data,color) {
     var timeseries2plot = color.domain().map(function(name) {
+        console.log(name)
         return {
             name: name,
             values: data.map(function(d) {
@@ -161,37 +164,6 @@ function setupScaleDomains(timeseries2plot,data,xScale,yScale) {
 }
 
 function drawLegend(timeseries2plot, color) {
-    console.log("Inside Draw Legend")
-    legend = svg.selectAll('g')
-    .data(timeseries2plot)
-    .enter()
-    .append('g')
-    .attr('class', 'legend');
-    console.log(timeseries2plot)
-    legend.append('rect')
-    .attr('x', 20)
-    .attr('y', function(d, i) {
-        return i * 20 - 10;
-    })
-    .attr('width', 20)
-    .attr('height', 5)
-    .style('fill', function(d) {
-        return color(d.name);
-    });
-
-    legend.append('text')
-    .attr('x', 50)
-    .attr('y', function(d, i) {
-        return (i * 20) - 5;
-    })
-    .text(function(d) {
-        console.log(d.name)
-        return d.name;
-    })
-    .style('fill', 'white');
-}
-
-function updateLegend(timeseries2plot, color) {
     console.log("Inside Draw Legend")
     legend = svg.selectAll('g')
     .data(timeseries2plot)
@@ -364,6 +336,149 @@ function setMouseInteractions(timeseries2plot,data,color,xScale,yScale) {
     })
 }
 
+function rebuildplot(value,jsondata,ChosenYAxis){
+    
+    console.log(value)
+    console.log(ChosenYAxis)
+    if (value!=ChosenYAxis){
+        ChosenYAxis=value;
+        data = [];
+        console.log(ChosenYAxis)
+            if (ChosenYAxis==="Production"){
+                names = [`Wood Energy ${ChosenYAxis}`,
+                `Biofuels ${ChosenYAxis}`,
+                `Total Biomass Energy ${ChosenYAxis}`,
+                `Total Renewable Energy ${ChosenYAxis}`,
+                ];
+            }
+            else {
+                console.log("inside else")
+                names = [`Wood Energy ${ChosenYAxis}`,
+                `Biofuels ${ChosenYAxis}`,
+                `Total Biomass Energy ${ChosenYAxis}`,
+                `Total Renewable Energy ${ChosenYAxis}`,
+                `Geothermal Energy ${ChosenYAxis}`,
+                `Hydroelectric Power ${ChosenYAxis}`,
+                `Solar Energy ${ChosenYAxis}`,
+                `Waste Energy ${ChosenYAxis}`,
+                `Wind Energy ${ChosenYAxis}`
+                ];
+            }
+        for (var i = 0; i < jsondata.length; i++) {
+            var row = { "date": jsondata[i].date };
+            for (const n of names) {
+                row[n] = jsondata[i][n];
+            }
+            data.push(row);
+        };
+    
+        console.log(jsondata);
+        console.log(data);
+
+        d3.select(graphtitle).text("")
+        d3.select(graphtitle)
+        .append("h3")
+        .append("b")
+        .text(`Yearly ${ChosenYAxis} by sources`)
+
+        var xScale,yScale,xAxis,yAxis,timeseries2plot
+        // Set general color scale (20)
+        var bubbleColors=setLinesColorScale()
+        //console.log(bubbleColors)
+
+        appendSvg(domElement,data,bubbleColors) // Add general svg
+
+        scales=setupScales()
+        console.log(scales)
+        xScale=scales[0]
+        yScale=scales[1]
+        //[xScale,yScale]=setupScales() 
+        //console.log(xScale)
+
+        // Set X, Y axis
+        var Axis=setupAxis(xScale,yScale) // Set X, Y axis
+        xAxis=Axis[0]
+        yAxis=Axis[1]
+
+        interpolateLines(jsondata,xScale,yScale) // Interpolate lines from parsed data
+        //colorTransform(data,bubbleColors);
+        
+        timeseries2plot=mapLines(jsondata,bubbleColors) // Map lines
+        console.log(timeseries2plot)
+        setupScaleDomains(timeseries2plot,jsondata,xScale,yScale) // Set scale domains
+        //transformyAxis(yScale,yAxis)
+        console.log("Before Legend")
+        drawLegend(timeseries2plot,bubbleColors) // Draw legend
+        console.log("After Legend")
+        setLabels(xAxis,yAxis,ChosenYAxis) // Set text labels
+
+        // Add interactions
+        setLineFollower(timeseries2plot,jsondata,bubbleColors,xScale,yScale)
+
+        setMouseInteractions(timeseries2plot,jsondata,bubbleColors,xScale,yScale)
+
+        //Create labels group for y axis
+        var ylabelsgroup= svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+    // // , `translate(0, ${(0 - (height / 2))})`)
+    // // .attr("transform", `translate(${width / 2}, ${height + margin.top})`)
+    // //.classed("yText", true)
+
+    //Add label for Production and default to active
+        var ProductionLabel = ylabelsgroup.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", -100)
+        .attr("dy", ".80em")
+        .attr("x", -(height/3))
+        .style("text-anchor", "end")
+        //.style("fill","white")
+        .attr("value", "Production") // value to grab for event listener
+        //.classed("active ylabel", true)
+        .text("Production [Trillion (BTU]");
+
+    //Add label for Consumption and default to inactive
+        var ConsumptionLabel = ylabelsgroup.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", -80)
+        .attr("dy", "1.20em")
+        .attr("x", -(height/3))
+        .style("text-anchor", "end")
+        //.style("fill","white")
+        .attr("value", "Consumption") // value to grab for event listener
+        //.classed("inactive ylabel", true)
+        .text("Consumption [Trillion (BTU]");
+
+        if (ChosenYAxis === "Consumption") {
+            ConsumptionLabel
+                .classed("active ylabel", true)
+                .classed("inactive ylabel", false);
+            ProductionLabel
+                .classed("active ylabel", false)
+                .classed("inactive ylabel", true);
+        }
+        else {
+            ProductionLabel
+                .classed("active ylabel", true)
+                .classed("inactive ylabel", false);
+            ConsumptionLabel
+                .classed("active ylabel", false)
+                .classed("inactive ylabel", true);
+        } 
+
+        d3.selectAll(".ylabel")
+        .on("click",function(){
+            var value = d3.select(this).attr("value");
+            console.log(value)
+            if (value!=ChosenYAxis){
+                rebuildplot(value,jsondata,ChosenYAxis);
+            }
+        
+        })
+
+    }
+}
+
 //d3.json("http://localhost:5000/renewables").then(jsondata=> {
 d3.json(url,function(jsondata) {
     
@@ -448,68 +563,17 @@ d3.json(url,function(jsondata) {
         .attr("value", "Consumption") // value to grab for event listener
         .classed("inactive ylabel", true)
         .text("Consumption [Trillion (BTU]");
-
+    
     d3.selectAll(".ylabel")
     .on("click",function(){
         var value = d3.select(this).attr("value");
         console.log(value)
-
         if (value!=ChosenYAxis){
-            ChosenYAxis=value;
-            data = [];
-            names = [`Wood Energy ${ChosenYAxis}`,
-            `Biofuels ${ChosenYAxis}`,
-            `Total Biomass Energy ${ChosenYAxis}`,
-            `Total Renewable Energy ${ChosenYAxis}`,
-            ];
-            for (var i = 0; i < jsondata.length; i++) {
-                var row = { "date": jsondata[i].date };
-                for (const n of names) {
-                    row[n] = jsondata[i][n];
-                }
-                data.push(row);
-            };
-            console.log(jsondata);
-            console.log(data);
-            interpolateLines(jsondata,xScale,yScale) // Interpolate lines from parsed data
-            colorTransform(data,bubbleColors);
-            //appendSvg(domElement,data,bubbleColors) // Add general svg
-            timeseries2plot=mapLines(jsondata,bubbleColors) // Map lines
-            setupScaleDomains(timeseries2plot,jsondata,xScale,yScale) // Set scale domains
-            //transformyAxis(yScale,yAxis)
-            console.log("Before Legend")
-            drawLegend(timeseries2plot,bubbleColors) // Draw legend
-            console.log("After Legend")
-            //setLabels(xAxis,yAxis,ChosenYAxis) // Set text labels
-
-            // Add interactions
-            setLineFollower(timeseries2plot,jsondata,bubbleColors,xScale,yScale)
-
-            setMouseInteractions(timeseries2plot,jsondata,bubbleColors,xScale,yScale)
-
-            if (ChosenYAxis === "Consumption") {
-                ConsumptionLabel
-                    .classed("active", true)
-                    .classed("inactive", false);
-                ProductionLabel
-                    .classed("active", false)
-                    .classed("inactive", true);
-            }
-            else {
-                ProductionLabel
-                    .classed("active", true)
-                    .classed("inactive", false);
-                ConsumptionLabel
-                    .classed("active", false)
-                    .classed("inactive", true);
-            }
-
+            rebuildplot(value,jsondata,ChosenYAxis);
         }
+        
     })
-}).
-catch(function(error) {
-  console.log(error); // 'Oops!'
-});
+})
 
 
     /*  Araceli Manzano Chicano (aramanzano@uma.es)

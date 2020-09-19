@@ -1,1 +1,5 @@
-# Project2-Group_4
+# US-Energy-Group-Project
+Vipul Aggarwal
+June Wang
+Liliana Joya
+Kannika Phadoungxath

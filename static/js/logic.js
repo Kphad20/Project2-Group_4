@@ -32,7 +32,7 @@ lightmap.addTo(myMap);
 var overlays = {
     "Production": layers.PRODUCTION,
     "Consumption": layers.CONSUMPTION,
-    "Emissions": layers.EMISSIONS
+    "CO2 Emissions": layers.EMISSIONS
 };
 
 // Pass our map layers into our layer control
